@@ -2,6 +2,8 @@ backend:
   name: github
   repo: pashupatinath-news/thepashupatinathnews
   branch: main
+  base_url: https://pashupatinath-news.github.io
+  auth_endpoint: api/auth
 
 media_folder: "images"
 public_folder: "/images"
@@ -11,13 +13,8 @@ collections:
     label: "News"
     folder: "content/news"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - label: "Title"
-        name: "title"
-        widget: "string"
-            - label: "Date"
-        name: "date"
-        widget: "datetime"
-            - label: "Body"
-        name: "body"
-        widget: "text"
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Date", name: "date", widget: "datetime"}
+            - {label: "Body", name: "body", widget: "markdown"}
