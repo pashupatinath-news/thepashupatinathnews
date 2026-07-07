@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>The Pashupatinath News</title>
-  <style>
-    body{font-family:sans-serif;background:#f5f5f5;margin:0;padding:20px}
-    .container{max-width:800px;margin:auto;background:white;padding:20px;border-radius:10px}
-    h1{text-align:center;color:#b30000}
-    .news{border-bottom:1px solid #ddd;padding:15px 0}
-    .news h2{color:#333;margin:0 0 10px}
-    .news img{max-width:100%;border-radius:8px;margin-top:10px}
-    .cat{background:#b30000;color:white;padding:3px 8px;border-radius:5px;font-size:12px}
-    a{color:#b30000;text-align:center;display:block;margin-top:20px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pashupatinath News - Kunkuri Edition</title>
+<meta name="description" content="Kunkuri ki sabse tez khabar. Local, National, Khel, Dharm ki news">
+<style>
+body { font-family: 'Noto Serif', serif; background:#f5f5f5; margin:0; color:#111; }
+.header { background:#b30000; color:white; text-align:center; padding:15px; }
+.header h1 { margin:0; font-size:28px; }
+.header p { margin:5px 0 0; font-size:14px; }
+.topbar { background:white; border-bottom:2px solid #b30000; padding:8px; text-align:center; font-weight:bold; }
+.container { max-width:1100px; margin:20px auto; padding:10px; display:grid; grid-template-columns: repeat(3, 1fr); gap:15px; }
+.news { background:white; padding:12px; border:1px solid #ddd; }
+.news h3 { font-size:18px; margin:5px 0; color:#b30000; }
+.news p { font-size:14px; line-height:1.6; }
+.news .meta { font-size:12px; color:#666; margin-top:8px; }
+.pages { text-align:center; margin:20px; }
+.pages a { background:#b30000; color:white; padding:8px 15px; margin:3px; text-decoration:none; border-radius:3px; }
+@media(max-width:768px){ .container{ grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
-<div class="container">
-  <h1>The Pashupatinath News</h1>
-  <p style="text-align:center">Site Live Hai</p>
-  
-  <div id="news-list">Loading...</div>
-  
-  <a href="/thepashupatinathnews/admin/">Admin Panel Khole</a>
+
+<div class="header">
+  <h1>THE PASHUPATINATH NEWS</h1>
+  <p>Kunkuri Edition | Satyamev Jayate</p>
+</div>
+
+<div class="topbar" id="dateBox"></div>
+
+<div class="container" id="newsGrid"></div>
+
+<div class="pages">
+  <a href="#">Page 1</a>
+  <a href="#">Page 2</a>
+  <a href="#">Page 3</a>
 </div>
 
 <script>
-// Admin me jo naam se save hota hai wahi naam yaha bhi
-// Demo news
-let demoNews = [
-  {title: "Jai Shree Ganesha", category: "National", date: "2025-10-05", content: "Aaj Ganesh ji ki pooja hai"}
+const today = new Date().toLocaleDateString('hi-IN', {day:'2-digit', month:'long', year:'numeric'});
+document.getElementById('dateBox').innerText = `Edition: Kunkuri | Date: ${today} | Page: 1`;
+
+const news = [
+  {category:"National", title:"Jai Shree Ganesha", content:"Aaj Ganesh ji ki pooja hai. Mandiro me bhakto ki bheed.", date:today},
+  {category:"Local", title:"Kunkuri me baarish", content:"Pichle 24 ghante me achhi baarish hui. Kisano me khushi.", date:today},
+  {category:"Dharam", title:"Mandir me bhandara", content:"Pashupatinath mandir me kal bhandara aayojit.", date:today}
 ];
 
-let news = JSON.parse(localStorage.getItem('pashupatinathNews')) || demoNews;
 let html = '';
-if(news.length === 0){
-  html = '<p style="text-align:center">Abhi koi news nahi hai</p>';
-}else{
-  news.reverse().forEach(n => {
-    html += `<div class="news">
-      <span class="cat">${n.category}</span>
-      <h2>${n.title}</h2>
-      <p>${n.content}</p>
-      ${n.img ? `<img src="${n.img}">` : ''}
-    </div>`;
-  });
-}
-document.getElementById('news-list').innerHTML = html;
+news.forEach(n => {
+  html += `<div class="news">
+    <div class="meta">${n.category}</div>
+    <h3>${n.title}</h3>
+    <p>${n.content}</p>
+    <div class="meta">${n.date}</div>
+  </div>`;
+});
+document.getElementById('newsGrid').innerHTML = html;
 </script>
+
 </body>
 </html>
