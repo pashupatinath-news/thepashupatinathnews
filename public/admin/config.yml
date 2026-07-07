@@ -7,9 +7,9 @@ public_folder: "/images"
 
 collections:
     - name: "news"
-    label: "News"
-    folder: "content/news"
-    create: true
+        label: "News"    
+        folder: "content/news"
+        create: true
     fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Date", name: "date", widget: "datetime"}
