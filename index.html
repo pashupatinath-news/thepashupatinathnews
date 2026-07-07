@@ -1,12 +1,46 @@
-<!DOCTYPE html>
-<html>
+here<!DOCTYPE html>
+<html lang="hi">
 <head>
-  <title>The Pashupatinath News</title>
   <meta charset="UTF-8">
+  <title>The Pashupatinath News</title>
+  <style>
+    body{font-family:sans-serif;background:#f5f5f5;margin:0;padding:20px}
+    .container{max-width:800px;margin:auto;background:white;padding:20px;border-radius:10px}
+    h1{text-align:center;color:#b30000}
+    .news{border-bottom:1px solid #ddd;padding:15px 0}
+    .news h2{color:#333;margin:0 0 10px}
+    .news img{max-width:100%;border-radius:8px;margin-top:10px}
+    .cat{background:#b30000;color:white;padding:3px 8px;border-radius:5px;font-size:12px}
+    a{color:#b30000;text-align:center;display:block;margin-top:20px}
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 50px;">
+<body>
+<div class="container">
   <h1>The Pashupatinath News</h1>
-  <p>Site Live Hai</p>
-  <a href="./public/admin/">Admin Panel Khole</a>
+  <p style="text-align:center">Site Live Hai</p>
+  
+  <div id="news-list">Loading...</div>
+  
+  <a href="/thepashupatinathnews/admin/">Admin Panel Khole</a>
+</div>
+
+<script>
+// Ye admin se save hui news ko load karega
+let news = JSON.parse(localStorage.getItem('newsData')) || [];
+let html = '';
+if(news.length === 0){
+  html = '<p style="text-align:center">Abhi koi news nahi hai</p>';
+}else{
+  news.reverse().forEach(n => {
+    html += `<div class="news">
+      <span class="cat">${n.category}</span>
+      <h2>${n.title}</h2>
+      <p>${n.desc}</p>
+      ${n.img ? `<img src="${n.img}">` : ''}
+    </div>`;
+  });
+}
+document.getElementById('news-list').innerHTML = html;
+</script>
 </body>
 </html>
