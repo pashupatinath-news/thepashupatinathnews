@@ -1,16 +1,16 @@
 backend:
-  name: github
+  name: git-gateway
   branch: main
-  repo: thepashupatinathnews/thepashupatinathnews
-media_folder: "public/uploads"
-public_folder: "/uploads"
+
+media_folder: "images"
+public_folder: "/images"
+
 collections:
-    - name: news
-    label: News
-    folder: content/news
+    - name: "news"
+    label: "News"
+    folder: "content/news"
     create: true
     fields:
-            - {label: Title, name: title, widget: string}
-            - {label: Date, name: date, widget: datetime}
-            - {label: Image, name: image, widget: image}
-            - {label: Body, name: body, widget: markdown}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Date", name: "date", widget: "datetime"}
+            - {label: "Body", name: "body", widget: "text"}
