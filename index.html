@@ -26,7 +26,12 @@
 
 <script>
 // Admin me jo naam se save hota hai wahi naam yaha bhi
-let news = JSON.parse(localStorage.getItem('pashupatinathNews')) || [];
+// Demo news
+let demoNews = [
+  {title: "Jai Shree Ganesha", category: "National", date: "2025-10-05", content: "Aaj Ganesh ji ki pooja hai"}
+];
+
+let news = JSON.parse(localStorage.getItem('pashupatinathNews')) || demoNews;
 let html = '';
 if(news.length === 0){
   html = '<p style="text-align:center">Abhi koi news nahi hai</p>';
