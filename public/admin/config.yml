@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: pashupatinath-news/thepashupatinathnews
   branch: main
 
 media_folder: "images"
@@ -7,10 +8,16 @@ public_folder: "/images"
 
 collections:
     - name: "news"
-        label: "News"    
-        folder: "content/news"
-        create: true
+    label: "News"
+    folder: "content/news"
+    create: true
     fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Date", name: "date", widget: "datetime"}
-            - {label: "Body", name: "body", widget: "text"}
+            - label: "Title"
+        name: "title"
+        widget: "string"
+            - label: "Date"
+        name: "date"
+        widget: "datetime"
+            - label: "Body"
+        name: "body"
+        widget: "text"
