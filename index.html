@@ -40,7 +40,7 @@ if(news.length === 0){
     html += `<div class="news">
       <span class="cat">${n.category}</span>
       <h2>${n.title}</h2>
-      <p>${n.desc}</p>
+      <p>${n.content}</p>
       ${n.img ? `<img src="${n.img}">` : ''}
     </div>`;
   });
