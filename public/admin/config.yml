@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
-media_folder: public/images
-public_folder: /images
+  repo: thepashupatinathnews/thepashupatinathnews
+media_folder: "public/uploads"
+public_folder: "/uploads"
 collections:
     - name: news
     label: News
