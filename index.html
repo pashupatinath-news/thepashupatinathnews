@@ -117,7 +117,8 @@ fetch(sheet_url)
     for(let i=1; i<rows.length; i++){
         let cols = rows[i].querySelectorAll("td");
         if(cols.length > 0){
-            news.push(cols[0].innerText); // Column A ki news lega
+            news.push(cols[3].innerText); // Column D ki news lega
+        }
         }
     }
     
