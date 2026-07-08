@@ -1,131 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS</title>
-<style>
-    body{font-family:Arial;margin:0;background:#F5F5F5;padding-bottom:80px;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE PASHUPATINATH NEWS</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+    header { background: #0B1F3A; color: white; padding: 15px; text-align: center; }
+    header h1 { margin: 0; color: #D4AF37; font-size: 28px; }
+    header p { margin: 5px 0 0 0; }
     
-   /* HEADER BLACK & WHITE WITH BORDER */
-.header {
-  background: #000;
-  color: #fff;
-  padding: 15px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-family: 'Times New Roman', serif;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border-bottom: 4px solid #fff;
-  border-image: repeating-linear-gradient(45deg, #000, #000 10px, #fff 10px, #fff 20px) 4;
-  position: relative;
-}
-.header::before, .header::after {
-  content: ""; /* Khali kar diya */
-  position: absolute;
-  top: 8px;
-  font-size: 14px;
-  letter-spacing: 10px;
-  color: #000;
-  background: #fff;
-  padding: 3px 6px;
-  border-radius: 3px;
-}
-.header::before {left: 10px;}
-.header::after {right: 10px;}
-
-.logo-center {
-  height: 45px;
-  width: auto;
-  vertical-align: middle;
-}
-
-    /* BREAKING TICKER SLIDE */
-    .breaking{background:#ff0000;color:#fff;padding:8px;font-size:14px;overflow:hidden;white-space:nowrap;}
-    .breaking span{background:#ffff00;color:#000;padding:3px 8px;font-weight:bold;margin-right:10px;border-radius:3px;}
-    .ticker { display: inline-block; padding-left: 100%; animation: scroll 15s linear infinite; }
-    .ticker { display: inline-block; padding-left: 100%; animation: scroll 15s linear infinite; }
-    @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-
-    .container{max-width:1000px;margin:15px auto;padding:10px;}
-    .card{background:#fff;margin-bottom:15px;border-radius:5px;overflow:hidden;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-    .card img{width:100%;height:180px;object-fit:cover;}
-    .card h2{font-size:18px;padding:10px;margin:0;color:#000;}
-    .card a{text-decoration:none;color:inherit;}
+    .ticker { background: red; color: white; padding: 10px; overflow: hidden; white-space: nowrap; font-weight: bold; font-size: 16px; }
     
-}
-}
+    .magazine { background: #0B1F3A; color: white; padding: 30px 20px; text-align: center; border-bottom: 4px solid #D4AF37; }
+    .magazine h2 { color: #D4AF37; margin: 0; }
+    .magazine-box { background:white; color:black; padding:20px; margin:20px auto; width:90%; max-width:800px; border-radius:10px; text-align:left; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .magazine-box h3 { color: #0B1F3A; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; }
+    .btn { background: #D4AF37; color: #0B1F3A; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
     
-    /* FOOTER */
-    .footer{background:#222;color:#ccc;text-align:center;padding:20px 10px;margin-top:30px;font-size:14px;}
-    .footer h3{color:#fff;margin:5px 0;}
-    .btn{display:inline-block;margin:5px;padding:10px 15px;border-radius:5px;text-decoration:none;color:#fff;font-weight:bold;}
-    .btn-whatsapp{background:#25D366;}
-    .btn-insta{background:#E1306C;}
-</style>
+    .section-title { text-align:center; color:#0B1F3A; padding: 30px 0 10px 0; font-size: 26px; }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
+    .news-card { border: 1px solid #ddd; padding: 15px; border-radius: 10px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .news-card h4 { color: #0B1F3A; margin-top: 0; }
+    
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
+    .staff-card { text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 10px; background: #fff; }
+    .staff-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37; }
+    .staff-card h4 { margin: 10px 0 5px 0; color: #0B1F3A; }
+    
+    footer { background: #0B1F3A; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    
+    @media(max-width:768px){ .team-grid{ grid-template-columns: repeat(2, 1fr); } }
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <span>THE</span>
-  <img src="logo.png" class="logo-center">
-  <span>PASHUPATINATH NEWS</span>
-</div>
-<div class="breaking">
-   <div class="breaking">
-   <span class="breaking-label">BREAKING</span>
-     <div class="ticker">कुकुरी में भारी बारिश | MP में अलर्ट | भोपाल में ट्रैफिक</div>
-</div>
-</div>
+  <header>
+    <h1>THE PASHUPATINATH NEWS</h1>
+    <p>सत्य की ओर, धर्म की ओर</p>
+  </header>
+
+  <div class="ticker">
+    🔴 BREAKING: भोपाल में आज तापमान 40°C तक | 🔴 कोलार रोड पर नया फ्लाईओवर बनेगा | 🔴 Pashupatinath Mandir में कल विशेष पूजा
   </div>
-</div>
 
-<div class="container">
-    <a href="news1.html" style="text-decoration:none; color:inherit;">
-  <div class="card">
+  <section class="magazine">
+    <h2>दैनिक ई-मैगज़ीन</h2>
+    <h3 style="color:#D4AF37; margin-top:5px;">अंक 1 | 4 अप्रैल 2026 | शनिवार</h3>
     
-      <img src="https://images.unsplash.com/photo-1508697014387-db70aad34f4d?q=80&w=1000">
-      <h2>कुकुरी में भारी बारिश से जनजीवन प्रभावित, प्रशासन अलर्ट पर</h2>
-
-    </a>
-  </div>
-</div>
-
-<div class="footer">
-  <h3>Editor: Aayush Vaishnav</h3>
-  <p>Contact: 9303100358</p>
-  <a href="https://wa.me/919303100358" class="btn btn-whatsapp">WhatsApp</a>
-  <a href="https://instagram.com" class="btn btn-insta">Instagram</a>
-  <p style="margin-top:15px;">© 2026 The Pashupatinath News</p>
-</div>
-<script>
-const sheet_url = "https://docs.google.com/spreadsheets/d/e/1C39zOVw7Gf969eZUur.../pubhtml"
-
-fetch(sheet_url)
-.then(res => res.text())
-.then(data => {
-    let parser = new DOMParser();
-    let htmlDoc = parser.parseFromString(data, 'text/html');
-    let rows = htmlDoc.querySelectorAll("table tr");
-    let news = [];
+    <div class="magazine-box">
+      <h3>आज की खास खबरें</h3>
+      <p><b>1.</b> शहर में नई मेट्रो लाइन का सर्वे शुरू</p>
+      <p><b>2.</b> स्थानीय बाजार में नवरात्रि की तैयारी जोरों पर</p>
+      <p><b>3.</b> संपादकीय: डिजिटल मीडिया का भविष्य</p>
+      <p><b>4.</b> खेल: IPL में आज RCB vs CSK शाम 7:30 बजे</p>
+      <p><b>5.</b<p><b>6.</b> शिक्षा: बोर्ड परीक्षा का रिजल्ट अगले हफ्ते</p>
+      <p><b>7.</b> स्वास्थ्य: गर्मी में पानी ज्यादा पिएं - डॉक्टर की सलाह</p>
+      <p><b>8.</b> राजनीति: नगर निगम की बैठक में 5 प्रस्ताव पास</p>
+      <p><b>9.</b> अपराध: पुलिस ने 2 चोरों को किया गिरफ्तार</p>
+      <p><b>10.</b> मौसम: अगले 3 दिन बारिश के आसार</p>
+      <p><b>11.</b> विशेष: Pashupatinath Mandir का इतिहास</p>
+    </div>
     
-    // Pehli row header hoti hai, isliye i=1 se start
-    for(let i=1; i<rows.length; i++){
-        let cols = rows[i].querySelectorAll("td");
-        if(cols.length > 0){
-            news.push(cols[3].innerText); // Column D ki news lega
-        }
-        }
-    }
+    <a href="#" class="btn">इस अंक को Download करें</a>
+  </section>
+
+  <section>
+    <h2 class="section-title">आज की 10 बड़ी खबरें</h2>
     
-    //document.querySelector(".ticker").innerText = news.join(" | "); Ticker me news jod do
-    document.querySelector(".ticker").innerText = news.join(" | • ");
-})
-.catch(err => console.log("Sheet load nahi hui:", err));
-</script>
+    <div class="news-grid">
+       <div class="news-card"><h4>खबर 1: भोपाल एयरपोर्ट पर नई फ्लाइट</h4><p>इंडिगो की नई फ्लाइट मुंबई के लिए शुरू।</p></div>
+      <div class="news-card"><h4>खबर 2: पानी की सप्लाई 2 घंटे बढ़ी</h4><p>नगर निगम ने गर्मी के कारण सप्लाई बढ़ाई।</p></div>
+      <div class="news-card"><h4>खबर 3: स्कूलों में गर्मी की छुट्टी</h4><p>1 मई से 15 जून तक सभी स्कूल बंद।</p></div>
+      <div class="news-card"><h4>खबर 4: ट्रैफिक नियम सख्त</h4><p>बिना हेलमेट 1000 रुपये का चालान।</p></div>
+      <div class="news-card"><h4>खबर 5: बिजली कटौती 4 घंटे</h4><p>दोपहर 12 से 4 बजे तक लोड शेडिंग।</p></div>
+      <div class="news-card"><h4>खबर 6: किसान मेला 10 अप्रैल को</h4><p>BHEL मैदान में कृषि प्रदर्शनी।</p></div>
+      <div class="news-card"><h4>खबर 7: साइबर फ्रॉड अलर्ट</h4><p>पुलिस ने OTP शेयर न करने की अपील की।</p></div>
+      <div class="news-card"><h4>खबर 8: नई बस सेवा शुरू</h4><p>ISBT से एयरपोर्ट के लिए हर 30 मिनट बस।</p></div>
+      <div class="news-card"><h4>खबर 9: अस्पताल में नए डॉक्टर</h4><p>हमिदिया में 5 नए स्पेशलिस्ट।</p></div>
+      <div class="news-card"><h4>खबर 10: पेट्रोल 2 रुपये सस्ता</h4><p>आज रात से नया रेट लागू।</p></div>
+    </div>
+  </section>
+
+  <section style="background:#f0f0f0;">
+    <h2 class="section-title">हमारी टीम</h2>
+    
+    <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>राहुल शर्मा</h4><p>मुख्य संपादक</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>प्रिया वर्मा</h4><p>सीनियर रिपोर्टर</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>अमित पटेल</h4><p>डिजिटल हेड</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>स्नेहा गुप्ता</h4><p>कंटेंट राइटर</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>विकास यादव</h4><p>फोटो जर्नलिस्ट</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>पूजा सिंह</h4><p>सोशल मीडिया</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>अंकित मिश्रा</h4><p>वीडियो एडिटर</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>सौरभ जैन</h4><p>टेक सपोर्ट</p></div>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>रितु अग्रवाल</h4><p>ग्राफिक डिजाइनर</p></div>
+    </div>
+  </section>
+      <div class="staff-card"><img src="https://via.placeholder.com/80" alt="Staff"><h4>रितु अग्रवाल</h4><p>ग्राफिक डिजाइनर</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 THE PASHUPATINATH NEWS | Contact: info@pashupatinath.news</p>
+  </footer>
+
 </body>
 </html>
