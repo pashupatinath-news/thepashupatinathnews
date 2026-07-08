@@ -76,10 +76,10 @@
   <span>PASHUPATINATH NEWS</span>
 </div>
 <div class="breaking">
-  <span>BREAKING</span>
-  <div class="ticker">
-
-
+   <div class="breaking">
+   <span class="breaking-label">BREAKING</span>
+     <div class="ticker">कुकुरी में भारी बारिश | MP में अलर्ट | भोपाल में ट्रैफिक</div>
+</div>
 </div>
   </div>
 </div>
@@ -122,7 +122,7 @@ fetch(sheet_url)
         }
     }
     
-    // Ticker me news jod do
+    //document.querySelector(".ticker").innerText = news.join(" | "); Ticker me news jod do
     document.querySelector(".ticker").innerText = news.join(" | • ");
 })
 .catch(err => console.log("Sheet load nahi hui:", err));
