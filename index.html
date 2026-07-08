@@ -1,66 +1,48 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-      <meta name="google-site-verification" content="TQTp-NimH0C3hALhkthPa1Vj3qOdP7SjAT-tFFEKw8g" />
-    <base href="/thepashupatinathnews/">
-      <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Pashupatinath News - Kunkuri Edition</title>
-<meta name="description" content="Kunkuri ki sabse tez khabar. Local, National, Khel, Dharm ki news">
+<title>THE PASHUPATINATH NEWS</title>
 <style>
-body { font-family: 'Noto Serif', serif; background:#f5f5f5; margin:0; color:#111; }
-.header { background:#b30000; color:white; text-align:center; padding:15px; }
-.header h1 { margin:0; font-size:28px; }
-.header p { margin:5px 0 0; font-size:14px; }
-.topbar { background:white; border-bottom:2px solid #b30000; padding:8px; text-align:center; font-weight:bold; }
-.container { max-width:1100px; margin:20px auto; padding:10px; display:grid; grid-template-columns: repeat(3, 1fr); gap:15px; }
-.news { background:white; padding:12px; border:1px solid #ddd; }
-.news h3 { font-size:18px; margin:5px 0; color:#b30000; }
-.news p { font-size:14px; line-height:1.6; }
-.news .meta { font-size:12px; color:#666; margin-top:8px; }
-.pages { text-align:center; margin:20px; }
-.pages a { background:#b30000; color:white; padding:8px 15px; margin:3px; text-decoration:none; border-radius:3px; }
-@media(max-width:768px){ .container{ grid-template-columns:1fr; } }
+body{font-family:Arial;margin:0;background:#f5f5f5;}
+.header{background:#d60000;color:white;padding:12px;text-align:center;font-size:24px;font-weight:bold;letter-spacing:1px;}
+.breaking{background:yellow;color:red;padding:6px;font-weight:bold;text-align:center;font-size:14px;}
+.container{padding:10px;max-width:700px;margin:auto;}
+.card{background:white;margin-bottom:15px;border-radius:8px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.card h2{font-size:24px;margin:8px 0;color:#000;line-height:1.4;} /* Headline badi */
+.card p{font-size:15px;margin:8px 0;color:#555;line-height:1.5;}
+.card a{text-decoration:none;color:inherit;}
+.tag{background:#d60000;color:white;padding:3px 8px;font-size:12px;border-radius:3px;font-weight:bold;}
+.footer{text-align:center;padding:15px;font-size:12px;color:#777;}
 </style>
 </head>
 <body>
+<div class="header">THE PASHUPATINATH NEWS</div>
+<div class="breaking">⚡ BREAKING NEWS ⚡</div>
 
-<div class="header">
-  <h1>THE PASHUPATINATH NEWS</h1>
-  <p>Kunkuri Edition | Satyamev Jayate</p>
+<div class="container">
+  
+  <!-- News 1 -->
+  <a href="news1.html">
+  <div class="card">
+    <span class="tag">स्थानीय</span>
+    <h2>कुंकुरी में भारी बारिश से जनजीवन प्रभावित, प्रशासन अलर्ट पर</h2>
+    <p>पिछले 24 घंटे से हो रही बारिश के कारण निचले इलाकों में पानी भर गया है। स्कूलों में छुट्टी घोषित...</p>
+  </div>
+  </a>
+
+  <!-- News 2 - copy karke aur news add kar sakte ho -->
+  <a href="news2.html">
+  <div class="card">
+    <span class="tag">धार्मिक</span>
+    <h2>पशुपतिनाथ मंदिर में विशाल भंडारे का आयोजन, हजारों श्रद्धालु पहुंचे</h2>
+    <p>सोमवार को मंदिर परिसर में भंडारे का आयोजन किया गया जिसमें दूर-दूर से श्रद्धालु पहुंचे...</p>
+  </div>
+  </a>
+
 </div>
 
-<div class="topbar" id="dateBox"></div>
-
-<div class="container" id="newsGrid"></div>
-
-<div class="pages">
-  <a href="#">Page 1</a>
-  <a href="#">Page 2</a>
-  <a href="#">Page 3</a>
-</div>
-
-<script>
-const today = new Date().toLocaleDateString('hi-IN', {day:'2-digit', month:'long', year:'numeric'});
-document.getElementById('dateBox').innerText = `Edition: Kunkuri | Date: ${today} | Page: 1`;
-
-const news = [
-  {category:"National", title:"Jai Shree Ganesha", content:"Aaj Ganesh ji ki pooja hai. Mandiro me bhakto ki bheed.", date:today},
-  {category:"Local", title:"Kunkuri me baarish", content:"Pichle 24 ghante me achhi baarish hui. Kisano me khushi.", date:today},
-  {category:"Dharam", title:"Mandir me bhandara", content:"Pashupatinath mandir me kal bhandara aayojit.", date:today}
-];
-
-let html = '';
-news.forEach(n => {
-  html += `<div class="news">
-    <div class="meta">${n.category}</div>
-    <h3>${n.title}</h3>
-    <p>${n.content}</p>
-    <div class="meta">${n.date}</div>
-  </div>`;
-});
-document.getElementById('newsGrid').innerHTML = html;
-</script>
-
+<div class="footer">© 2026 THE PASHUPATINATH NEWS | Satyamev Jayate</div>
 </body>
 </html>
