@@ -3,46 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS</title>
+<title>The Pashupatinath News</title>
 <style>
-body{font-family:Arial;margin:0;background:#f5f5f5;}
-.header{background:#d60000;color:white;padding:12px;text-align:center;font-size:24px;font-weight:bold;letter-spacing:1px;}
-.breaking{background:yellow;color:red;padding:6px;font-weight:bold;text-align:center;font-size:14px;}
-.container{padding:10px;max-width:700px;margin:auto;}
-.card{background:white;margin-bottom:15px;border-radius:8px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-.card h2{font-size:24px;margin:8px 0;color:#000;line-height:1.4;} /* Headline badi */
-.card p{font-size:15px;margin:8px 0;color:#555;line-height:1.5;}
+body{font-family:Arial;margin:0;background:#f5f5f5;padding-bottom:80px;}
+.header{background:#d60000;color:white;padding:12px;text-align:center;font-size:22px;font-weight:bold;}
+.breaking{background:#ff0000;color:white;padding:8px 10px;font-size:14px;overflow:hidden;white-space:nowrap;}
+.breaking span{background:yellow;color:#000;padding:3px 8px;font-weight:bold;margin-right:10px;border-radius:3px;}
+.container{max-width:1000px;margin:15px auto;padding:10px;}
+.card{background:white;margin-bottom:15px;border-radius:5px;overflow:hidden;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card h2{font-size:18px;padding:10px;margin:0;color:#000;}
 .card a{text-decoration:none;color:inherit;}
-.tag{background:#d60000;color:white;padding:3px 8px;font-size:12px;border-radius:3px;font-weight:bold;}
-.footer{text-align:center;padding:15px;font-size:12px;color:#777;}
+.logo{height:35px;vertical-align:middle;margin-right:8px;border-radius:5px;}
+/* Footer */
+.footer{background:#222;color:#ccc;text-align:center;padding:20px 10px;margin-top:30px;font-size:14px;}
+.footer h3{color:white;margin:5px 0;}
+.btn{display:inline-block;margin:5px;padding:10px 15px;border-radius:5px;text-decoration:none;color:white;font-weight:bold;}
+.btn-whatsapp{background:#25D366;}
+.btn-insta{background:#E1306C;}
 </style>
 </head>
 <body>
-<div class="header">THE PASHUPATINATH NEWS</div>
-<div class="breaking">⚡ BREAKING NEWS ⚡</div>
 
-<div class="container">
-  
-  <!-- News 1 -->
-  <a href="news1.html">
-  <div class="card">
-    <span class="tag">स्थानीय</span>
-    <h2>कुंकुरी में भारी बारिश से जनजीवन प्रभावित, प्रशासन अलर्ट पर</h2>
-    <p>पिछले 24 घंटे से हो रही बारिश के कारण निचले इलाकों में पानी भर गया है। स्कूलों में छुट्टी घोषित...</p>
-  </div>
-  </a>
 
-  <!-- News 2 - copy karke aur news add kar sakte ho -->
-  <a href="news2.html">
-  <div class="card">
-    <span class="tag">धार्मिक</span>
-    <h2>पशुपतिनाथ मंदिर में विशाल भंडारे का आयोजन, हजारों श्रद्धालु पहुंचे</h2>
-    <p>सोमवार को मंदिर परिसर में भंडारे का आयोजन किया गया जिसमें दूर-दूर से श्रद्धालु पहुंचे...</p>
-  </div>
-  </a>
-
+<div class="header">
+  <img src="https://i.imgur.com/An-8dXqwxBbzixYovPxlvCSxh5j_Oefx0Om711vtJziYoffWiv88Hrh6X6RLbdLn6M7wnIkXuwRrxDu7GkfTRfxb2DBW4sEuSXP4ajJcEX-MqsTOa1J1iAMy" class="logo">
+  THE PASHUPATINATH NEWS
+</div>
+<div class="breaking">
+  <span>BREAKING</span>
+  कुंकुरी में बाढ़ का खतरा | मौसम विभाग ने जारी किया अलर्ट
 </div>
 
-<div class="footer">© 2026 THE PASHUPATINATH NEWS | Satyamev Jayate</div>
+<div class="container">
+  <div class="card">
+    <a href="news1.html">
+      <img src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800">
+      <h2>कुंकुरी में भारी बारिश से जनजीवन प्रभावित, प्रशासन अलर्ट पर</h2>
+    </a>
+  </div>
+</div>
+
+<!-- Footer with Contact -->
+<div class="footer">
+  <h3>Owner: Aayush Vaishnav</h3>
+  <p>Contact: 9303100358</p>
+  <a href="https://wa.me/919303100358" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+  <a href="https://www.instagram.com/aayush_vaishnav_1" class="btn btn-insta" target="_blank">Instagram</a>
+  <p style="margin-top:15px;font-size:12px;">© 2026 The Pashupatinath News</p>
+</div>
+
 </body>
 </html>
