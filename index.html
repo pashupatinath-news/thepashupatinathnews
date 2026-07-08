@@ -77,7 +77,7 @@
 <div class="breaking">
   <span>BREAKING</span>
   <div class="ticker">
-    कुकुरी में बाढ़ का खतरा | मौसम विभाग ने जारी किया अलर्ट | अगली खबर 2 मिनट में
+
   </div>
 </div>
 
@@ -99,6 +99,30 @@
   <a href="https://instagram.com" class="btn btn-insta">Instagram</a>
   <p style="margin-top:15px;">© 2026 The Pashupatinath News</p>
 </div>
+<script>
+// Google Sheet ka publish link
+const sheet_url = "https://docs.google.com/spreadsheets/d/e/1C39zOVw7Gf969eZUurx8vU8v1OBa3vdtg_lbTp79zzE/pubhtml";
 
+fetch(sheet_url)
+.then(res => res.text())
+.then(data => {
+    let parser = new DOMParser();
+    let htmlDoc = parser.parseFromString(data, 'text/html');
+    let rows = htmlDoc.querySelectorAll("table tr");
+    let news = [];
+    
+    // Pehli row header hoti hai, isliye i=1 se start
+    for(let i=1; i<rows.length; i++){
+        let cols = rows[i].querySelectorAll("td");
+        if(cols.length > 0){
+            news.push(cols[0].innerText); // Column A ki news lega
+        }
+    }
+    
+    // Ticker me news jod do
+    document.querySelector(".ticker").innerText = news.join(" | • ");
+})
+.catch(err => console.log("Sheet load nahi hui:", err));
+</script>
 </body>
 </html>
