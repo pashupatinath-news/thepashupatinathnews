@@ -7,28 +7,40 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:Arial;background:#fff;text-align:center}
-    header{background:#FFD700;padding:15px;border-bottom:4px solid #003399}
-    header img{width:45px;height:45px;vertical-align:middle;border-radius:50%;margin-right:10px}
-    header h1{display:inline;color:#003399;font-size:22px;vertical-align:middle;font-weight:bold}
-    .tagline{font-size:12px;color:#333;margin:10px;padding:0 15px;font-style:italic}
-    .lang{font-size:11px;background:#ffeef0;padding:8px;margin:0 10px 10px;border-radius:5px}
-    .epaper{background:#FFF8E1;border:3px solid #FF9800;margin:15px;padding:20px;border-radius:12px}
-    .epaper h2{color:#003399;font-size:22px;margin-bottom:5px}
-    .epaper img{width:85%;max-width:280px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.3);margin:15px 0;cursor:pointer}
-    .epaper p{color:#333;font-weight:bold}
-    .plans{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:20px 10px}
-    .plan{border:2px solid #ddd;padding:15px;border-radius:10px;width:170px;background:#fff}
-    .plan h3{color:#003399;margin:5px 0}
-    .price{font-size:24px;font-weight:bold;color:#003399;margin:10px 0}
-    .btn{background:#FF9800;color:white;border:none;padding:12px 25px;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
-    .benefits{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;background:#F5F5F5;padding:20px;margin:20px 0}
-    .benefit{width:90px;font-size:12px;color:#003399;font-weight:bold}
+    header{background:#fff;padding:15px;border-bottom:2px solid #FFA500}
+    header h1{color:#003399;font-size:22px;font-weight:bold;letter-spacing:1px}
+    .tagline{font-size:13px;color:#333;margin:15px 10px;font-style:italic}
+    .lang{font-size:11px;background:#FFF0F5;padding:8px;margin:0 10px 15px;border-radius:5px}
+    .epaper{background:#FFF8E1;border:2px solid #FFA500;margin:15px;padding:20px;border-radius:10px}
+    .epaper h2{color:#003399;font-size:20px;margin-bottom:8px}
+    .epaper p{font-size:12px;margin:5px 0;color:#333}
+    .epaper img{width:85%;max-width:280px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.2);margin:12px 0}
+    .epaper .note{font-size:12px;color:#555;font-weight:bold}
+    .plans{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:25px 10px}
+    .plan{border:1px solid #ddd;padding:20px;border-radius:8px;width:170px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+    .plan h3{color:#003399;margin:5px 0;font-size:16px}
+    .plan p{font-size:14px;color:#333;margin:5px 0}
+    .price{font-size:22px;font-weight:bold;color:#003399;margin:10px 0}
+    .btn{background:#FF9800;color:white;border:none;padding:10px 25px;border-radius:5px;font-weight:bold;font-size:14px;cursor:pointer}
+    .benefits{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;background:#F9F9F9;padding:25px 10px;margin:20px 0}
+    .benefits h2{width:100%;color:#003399;margin-bottom:15px}
+    .benefit{width:90px;font-size:11px;color:#003399;font-weight:bold}
+    .benefit div{font-size:24px;margin-bottom:5px}
+    .journalists{margin:25px 10px}
+    .journalists h2{color:#003399;margin:10px 0;font-size:18px}
+    .cards{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:15px}
+    .card{padding:20px;border-radius:10px;color:white;width:160px;text-align:center}
+    .card img{width:70px;height:70px;border-radius:50%;border:3px solid white;margin-bottom:10px;object-fit:cover}
+    .card h3{font-size:16px;margin:5px 0}
+    .card p{font-size:12px}
+    .orange{background:#FF9800}
+    .blue{background:#003399}
+    .green{background:#4CAF50}
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo-emblem.png" alt="Logo">
     <h1>THE PASHUPATINATH NEWS</h1>
   </header>
 
@@ -37,11 +49,9 @@
 
   <div class="epaper">
     <h2>DAILY E-PAPER</h2>
-    <p>10 Pages | Tribhasha Daily E-Magazine</p>
-    <a href="epaper-10page.pdf" target="_blank">
-      <img src="logo-emblem.png" alt="E-Paper Cover">
-    </a>
-    <p>Click on Image to Read & Download</p>
+    <p><b>10 Pages | Tribhasha Daily E-Magazine</b></p>
+    <img src="epaper-cover.jpg" alt="E-Paper Cover">
+    <p class="note">Click on Image to Read & Download</p>
   </div>
 
   <h2 style="color:#003399;margin:20px 0">Choose Your Plan</h2>
@@ -60,14 +70,36 @@
     </div>
   </div>
 
-  <h2 style="color:#003399;margin:20px 0">Subscription Benefits</h2>
   <div class="benefits">
-    <div class="benefit">📖<br>Read without Limits</div>
-    <div class="benefit">🚫<br>Minimal Ads</div>
-    <div class="benefit">📱<br>Mobile App Access</div>
-    <div class="benefit">📰<br>e-Paper</div>
-    <div class="benefit">🎬<br>Exclusive Videos</div>
-    <div class="benefit">🔔<br>Breaking Alerts</div>
+    <h2>Subscription Benefits</h2>
+    <div class="benefit"><div>📖</div>Read<br>without<br>Limits</div>
+    <div class="benefit"><div>🚫</div>Minimal<br>Ads</div>
+    <div class="benefit"><div>📱</div>Mobile<br>App<br>Access</div>
+    <div class="benefit"><div>📰</div>e-Paper</div>
+    <div class="benefit"><div>🎬</div>Exclusive<br>Videos</div>
+    <div class="benefit"><div>🔔</div>Breaking<br>Alerts</div>
+  </div>
+
+  <div class="journalists">
+    <h2>Journalists who write</h2>
+    <h2>For The Pashupatinath News</h2>
+    <div class="cards">
+      <div class="card orange">
+        <img src="logo-emblem.png">
+        <h3>AAYUSH<br>VAISHNAV</h3>
+        <p>CHIEF EDITOR +<br>OWNER</p>
+      </div>
+      <div class="card blue">
+        <img src="logo-emblem.png">
+        <h3>Rajesh Sharma</h3>
+        <p>Senior Editor</p>
+      </div>
+      <div class="card green">
+        <img src="logo-emblem.png">
+        <h3>Sita Karki</h3>
+        <p>Temple Correspondent</p>
+      </div>
+    </div>
   </div>
 
 </body>
