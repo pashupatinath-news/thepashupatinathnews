@@ -5,31 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THE PASHUPATINATH NEWS</title>
   <style>
-    body {margin:0; font-family: Arial; background:#fff; text-align:center;}
-    header {padding:20px; border-bottom:3px solid orange;}
-    header img {width:50px; height:50px; vertical-align:middle; border-radius:50%;}
-    header h1 {display:inline; color:#003399; margin-left:10px; font-size:22px; vertical-align:middle;}
-    .tagline {font-size:13px; color:#333; margin:15px; padding:0 10px;}
-    .lang {font-size:11px; background:#ffeef0; padding:8px; margin:10px;}
-    .epaper-box {background:#fff8e6; border:2px solid orange; margin:15px; padding:20px; border-radius:10px;}
-    .epaper-box h2 {color:#003399; margin:5px 0; font-size:20px;}
-    .epaper-img {width:90%; max-width:300px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); cursor:pointer; margin:10px 0;}
-    .plans {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:20px 10px;}
-    .plan {border:1px solid #ddd; padding:15px; border-radius:8px; width:160px; background:#fff;}
-    .plan h3 {color:#003399; margin:5px 0;}
-    .price {font-size:20px; font-weight:bold; color:#003399;}
-    .btn {background:orange; color:white; border:none; padding:10px 20px; border-radius:5px; font-weight:bold; cursor:pointer;}
-    .benefits {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; background:#f9f9f9; padding:20px; margin:20px 0;}
-    .benefit {width:100px; font-size:12px; color:#003399; font-weight:bold;}
-    .journalists {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:20px;}
-    .card {padding:20px; border-radius:10px; color:white; width:180px;}
-    .card img {width:60px; height:60px; border-radius:50%; border:2px solid white;}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Arial;background:#fff;text-align:center}
+    header{background:#FFD700;padding:15px;border-bottom:4px solid #003399}
+    header img{width:45px;height:45px;vertical-align:middle;border-radius:50%;margin-right:10px}
+    header h1{display:inline;color:#003399;font-size:22px;vertical-align:middle;font-weight:bold}
+    .tagline{font-size:12px;color:#333;margin:10px;padding:0 15px;font-style:italic}
+    .lang{font-size:11px;background:#ffeef0;padding:8px;margin:0 10px 10px;border-radius:5px}
+    .epaper{background:#FFF8E1;border:3px solid #FF9800;margin:15px;padding:20px;border-radius:12px}
+    .epaper h2{color:#003399;font-size:22px;margin-bottom:5px}
+    .epaper img{width:85%;max-width:280px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.3);margin:15px 0;cursor:pointer}
+    .epaper p{color:#333;font-weight:bold}
+    .plans{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:20px 10px}
+    .plan{border:2px solid #ddd;padding:15px;border-radius:10px;width:170px;background:#fff}
+    .plan h3{color:#003399;margin:5px 0}
+    .price{font-size:24px;font-weight:bold;color:#003399;margin:10px 0}
+    .btn{background:#FF9800;color:white;border:none;padding:12px 25px;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
+    .benefits{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;background:#F5F5F5;padding:20px;margin:20px 0}
+    .benefit{width:90px;font-size:12px;color:#003399;font-weight:bold}
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Title ke side me logo -->
     <img src="logo-emblem.png" alt="Logo">
     <h1>THE PASHUPATINATH NEWS</h1>
   </header>
@@ -37,18 +35,16 @@
   <p class="tagline">"It's not just any news" - Nepal's most trusted news of faith and culture.</p>
   <p class="lang">News Language: Hindi + English | E-Paper Language: Hindi + Sanskrit + English</p>
 
-  <div class="epaper-box">
+  <div class="epaper">
     <h2>DAILY E-PAPER</h2>
-    <p><b>10 Pages | Tribhasha Daily E-Magazine</b></p>
-    
-    <!-- Shiv ji wali image pe click karne se PDF khulegi -->
+    <p>10 Pages | Tribhasha Daily E-Magazine</p>
     <a href="epaper-10page.pdf" target="_blank">
-      <img src="logo-emblem.png" alt="E-Paper Cover" class="epaper-img">
+      <img src="logo-emblem.png" alt="E-Paper Cover">
     </a>
     <p>Click on Image to Read & Download</p>
   </div>
 
-  <h2>Choose Your Plan</h2>
+  <h2 style="color:#003399;margin:20px 0">Choose Your Plan</h2>
   <div class="plans">
     <div class="plan">
       <h3>All Access Pass</h3>
@@ -64,7 +60,7 @@
     </div>
   </div>
 
-  <h2>Subscription Benefits</h2>
+  <h2 style="color:#003399;margin:20px 0">Subscription Benefits</h2>
   <div class="benefits">
     <div class="benefit">📖<br>Read without Limits</div>
     <div class="benefit">🚫<br>Minimal Ads</div>
