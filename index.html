@@ -28,17 +28,6 @@
   .epaper{text-align:center;padding:15px;}
   .epaper img{width:100%;max-width:600px;border:1px solid #ddd;cursor:pointer;}
   
-  /* SPORTS 4 BOX */
-  .sports-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;padding:20px;}
-  .sports-box{border:2px solid #c00;border-radius:5px;padding:10px;background:#fff8f8;max-height:320px;overflow-y:auto;}
-  .sports-box h3{background:#c00;color:#fff;padding:8px;font-size:15px;margin:-10px -10px 10px -10px;text-align:center;}
-  .match{border-bottom:1px dashed #ccc;padding:8px 0;font-size:13px;}
-  .match:last-child{border:none;}
-  .live{color:#c00;font-weight:900;animation:blink 1s infinite;}
-  @keyframes blink{50%{opacity:0;}}
-  .india-match{background:#fff3cd;border-left:4px solid #ffc107;padding-left:5px;}
-  .commentary{font-size:12px;color:#333;background:#f1f1f1;padding:5px;border-radius:3px;margin-top:5px;}
-  
   .news{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:20px;}
   .card{border-bottom:1px solid #eee;padding-bottom:10px;}
   .card h3{font-size:18px;margin-bottom:5px;}
@@ -68,7 +57,7 @@
 <div class="breaking-news">
   <span>BREAKING NEWS</span>
   <marquee behavior="scroll" direction="left" scrollamount="5">
-    🔴 FIFA World Cup + India Cricket Live yahi | 🔴 Live Commentary har match ki | 🔴 THE PASHUPATINATH NEWS
+    🔴 THE PASHUPATINATH NEWS | 🔴 Hamare saath jude rahiye 
   </marquee>
 </div>
 
@@ -98,43 +87,6 @@
 <!-- E-Paper -->
 <div class="epaper">
   <img src="epaper.jpg" alt="Daily E-Paper" onclick="window.open('epaper.pdf','_blank')">
-</div>
-
-<!-- 4 BOX SPORTS SECTION -->
-<div class="sports-section">
-  <!-- 1. FIFA LIVE -->
-  <div class="sports-box">
-    <h3>⚽ FIFA WORLD CUP LIVE</h3>
-    <div class="match"><span class="live">LIVE</span> Argentina 2 - 1 France<br>
-      <div class="commentary">45+2' GOAL! Messi scores! Argentina 2-1</div>
-    </div>
-    <div class="match">Brazil 0 - 0 Portugal<br><small>Kickoff 12:30 AM</small></div>
-  </div>
-  
-  <!-- 2. FIFA SCHEDULE -->
-  <div class="sports-box">
-    <h3>📅 FIFA SCHEDULE</h3>
-    <div class="match">14 Dec: Spain vs England - 10:30 PM</div>
-    <div class="match">15 Dec: Germany vs Italy - 1:30 AM</div>
-    <div class="match">16 Dec: FINAL - 12:30 AM</div>
-  </div>
-
-  <!-- 3. INDIA CRICKET LIVE -->
-  <div class="sports-box">
-    <h3>🏏 INDIA CRICKET LIVE</h3>
-    <div class="match india-match"><span class="live">LIVE</span> India 145/3 vs Australia<br>
-      <div class="commentary">18.2 Over: Kohli 67*, Rohit 42. Last ball FOUR!</div>
-    </div>
-    <div class="match india-match">India vs Pakistan<br><small>20 Dec, 7:30 PM</small></div>
-  </div>
-  
-  <!-- 4. CRICKET SCHEDULE -->
-  <div class="sports-box">
-    <h3>📅 CRICKET SCHEDULE</h3>
-    <div class="match india-match">18 Dec: India vs SA - 7:00 PM</div>
-    <div class="match india-match">20 Dec: India vs PAK - 7:30 PM</div>
-    <div class="match">22 Dec: Final - 7:30 PM</div>
-  </div>
 </div>
 
 <!-- News -->
