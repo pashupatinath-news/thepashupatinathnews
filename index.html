@@ -4,105 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE PASHUPATINATH NEWS</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #333; text-align: center; }
-    .header { padding: 20px 10px 10px; border-bottom: 2px solid #f39c12; overflow: hidden; }
-    .header h1 { 
-        color: #0047ab; margin: 0; font-size: 28px; font-weight: bold;
-        position: relative;
-        animation: slideAnim 4s infinite;
-    }
-    @keyframes slideAnim {
-        0% { transform: translateY(-50px); opacity: 0; }
-        25% { transform: translateY(0); opacity: 1; }
-        50% { transform: translateX(0); }
-        75% { transform: translateX(-100%); opacity: 0.8; }
-        100% { transform: translateX(0); opacity: 1; }
-    }
-    .epaper-box { background: #fff8e1; border: 2px solid #f39c12; border-radius: 10px; margin: 20px; padding: 20px; }
-    .epaper-box h2 { color: #0047ab; margin-bottom: 5px; }
-    .epaper-box img { width: 250px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-    .click-text { margin-top: 10px; font-weight: bold; color: #000; }
-    
-    /* Breaking Ticker */
-    .ticker-wrap { background: #d32f2f; color: #fff; padding: 10px 0; overflow: hidden; margin: 10px 0; }
-    .ticker { display: inline-block; white-space: nowrap; padding-left: 100%; animation: ticker 15s linear infinite; font-weight: bold; }
-    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
-
-    /* Categories */
-    .categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px; }
-    .cat-box { background: #0047ab; color: #fff; padding: 12px 18px; border-radius: 8px; font-weight: bold; min-width: 160px; box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
-
-    /* Journalists */
-    .journalists { margin: 30px 20px; }
-    .journalists h2 { color: #0047ab; }
-    .journ-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .journ-card { background: #f39c12; color: #fff; padding: 15px; border-radius: 10px; width: 200px; }
-    .journ-card.blue { background: #0047ab; }
-    .journ-card img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; }
-    .journ-card h3 { margin: 5px 0; font-size: 16px; }
-    .journ-card p { margin: 0; font-size: 12px; }
-
-    /* Contact + Social */
-    .contact { background: #f1f1f1; padding: 20px; margin-top: 30px; }
-    .contact p { font-weight: bold; color: #0047ab; font-size: 16px; margin-bottom: 15px; }
-    .social-btn { display: inline-block; margin: 5px; padding: 10px 18px; border-radius: 8px; text-decoration: none; color: #fff; font-weight: bold; }
-    .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-    .yt { background: #FF0000; }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Merriweather', serif;}
+  body{background:#fff;color:#000;}
+  
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 20px;border-bottom:1px solid #ddd;font-size:14px;flex-wrap:wrap;}
+  .topbar button{background:#c00;color:#fff;border:none;padding:6px 12px;border-radius:3px;cursor:pointer;font-weight:700;}
+  .topbar .center{font-size:28px;font-weight:900;letter-spacing:1px;}
+  .topbar .right{display:flex;gap:15px;align-items:center;}
+  
+  .catbar{display:flex;align-items:center;gap:10px;padding:10px 20px;border-bottom:2px solid #000;overflow-x:auto;}
+  .catbar .logo{color:#c00;font-weight:900;}
+  .catbar a{text-decoration:none;color:#000;font-size:14px;font-weight:700;white-space:nowrap;}
+  .catbar a:hover{color:#c00;}
+  
+  .epaper{text-align:center;padding:15px;}
+  .epaper img{width:100%;max-width:600px;border:1px solid #ddd;cursor:pointer;}
+  
+  .news{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:20px;}
+  .card{border-bottom:1px solid #eee;padding-bottom:10px;}
+  .card h3{font-size:18px;margin-bottom:5px;}
+  
+  .journalist{padding:20px;background:#f9f9f9;}
+  .journalist h2{margin-bottom:10px;}
+  .jcard{display:flex;gap:10px;margin-bottom:10px;}
+  
+  footer{background:#111;color:#fff;padding:20px;text-align:center;}
+  footer a{color:#fff;margin:0 10px;text-decoration:none;}
+  
+  @media(max-width:768px){
+    .topbar .center{font-size:20px;width:100%;text-align:center;margin:5px 0;}
+  }
 </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>THE PASHUPATINATH NEWS</h1>
+<!-- Top Bar -->
+<div class="topbar">
+  <button onclick="window.open('epaper.pdf','_blank')">Read E-Paper</button>
+  <div class="center">THE PASHUPATINATH NEWS</div>
+  <div class="right">
+    <span>Edition - India</span>
+    <span>🌤️ 28°C Partabpur</span>
+  </div>
 </div>
 
-<div class="epaper-box">
-    <h2>DAILY E-PAPER</h2>
-    <p>10 Pages | Tribhasha Daily E-Magazine</p>
-    <img src="epaper-cover.jpg" alt="E-Paper Cover">
-    <div class="click-text">Click on Image to Read & Download</div>
+<!-- Category Bar -->
+<div class="catbar">
+  <span class="logo">TPN 🔴</span>
+  <a href="#">INTERNATIONAL</a> | 
+  <a href="#">INDIA</a> | 
+  <a href="#">TECH</a> | 
+  <a href="#">FOOTBALL</a> | 
+  <a href="#">CRICKET</a> | 
+  <a href="#">CARS</a> | 
+  <a href="#">POLITICAL</a>
 </div>
 
-<!-- Breaking News Ticker -->
-<div class="ticker-wrap">
-    <div class="ticker">BREAKING NEWS: Pashupatinath Mandir me aaj vishesh puja | Nepal me naye niyam lagu | E-Paper ab Hindi, Sanskrit aur English me uplabdh hai</div>
+<!-- E-Paper -->
+<div class="epaper">
+  <img src="epaper.jpg" alt="Daily E-Paper" onclick="window.open('epaper.pdf','_blank')">
 </div>
 
-<!-- 7 Categories -->
-<div class="categories">
-    <div class="cat-box">THE PASHUPATINATH NEWS</div>
-    <div class="cat-box">INDIA NEWS</div>
-    <div class="cat-box">INTERNATIONAL NEWS</div>
-    <div class="cat-box">POLITICAL NEWS</div>
-    <div class="cat-box">CRIME NEWS</div>
-    <div class="cat-box">RELIGIOUS NEWS</div>
-    <div class="cat-box">SPECIAL UNIQUE NEWS</div>
+<!-- News -->
+<div class="news">
+  <div class="card"><h3>Breaking News 1</h3><p>News details here...</p></div>
+  <div class="card"><h3>Breaking News 2</h3><p>News details here...</p></div>
+  <div class="card"><h3>Breaking News 3</h3><p>News details here...</p></div>
 </div>
 
-<!-- Journalists -->
-<div class="journalists">
-    <h2>Journalists who write For The Pashupatinath News</h2>
-    <div class="journ-grid">
-        <div class="journ-card">
-            <img src="logo-emblem.png" alt="">
-            <h3>AAYUSH VAISHNAV</h3>
-            <p>CHIEF EDITOR + OWNER</p>
-        </div>
-        <div class="journ-card blue">
-            <img src="logo-emblem.png" alt="">
-            <h3>PRASHANT VERMA</h3>
-            <p>CO - NEWS WRITER</p>
-        </div>
-    </div>
+<!-- Journalist -->
+<div class="journalist">
+  <h2>Our Journalists</h2>
+  <div class="jcard"><b>Aayush</b> - Senior Reporter</div>
+  <div class="jcard"><b>Rajesh Sharma</b> - Political Correspondent</div>
+  <div class="jcard"><b>Sita Karki</b> - Tech Writer</div>
 </div>
 
-<!-- Contact -->
-<div class="contact">
-    <p>Contact + WhatsApp: 9303100358</p>
-    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="social-btn insta">Follow on Instagram</a>
-    <a href="https://youtube.com/@newsman-view?si=t6df6RjpSNZlfBQS" target="_blank" class="social-btn yt">Subscribe on YouTube</a>
-</div>
+<!-- Footer -->
+<footer>
+  <p>Contact: +91-XXXXXXXXXX | WhatsApp</p>
+  <a href="#">YouTube</a> | <a href="#">Instagram</a>
+  <p>© 2026 THE PASHUPATINATH NEWS</p>
+</footer>
 
 </body>
 </html>
