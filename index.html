@@ -6,49 +6,44 @@
   <title>THE PASHUPATINATH NEWS</title>
   <style>
     body {margin:0; font-family: Arial; background:#fff; text-align:center;}
-    header {padding:15px; border-bottom:2px solid orange;}
+    header {padding:20px; border-bottom:3px solid orange;}
     header img {width:50px; height:50px; vertical-align:middle; border-radius:50%;}
     header h1 {display:inline; color:#003399; margin-left:10px; font-size:22px; vertical-align:middle;}
-    .tagline {font-size:12px; color:#333; margin:10px;}
-    .lang {background:#ffe6f0; padding:8px; font-size:12px;}
-    .epaper-box {background:#fff8e6; border:1px solid orange; margin:15px; padding:15px; border-radius:8px;}
-    .epaper-box h2 {color:#003399; margin:5px 0;}
-    .epaper-img {width:90%; max-width:300px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2); cursor:pointer;}
-    .plans {display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:20px;}
-    .plan {border:1px solid #ddd; padding:15px; border-radius:8px; width:150px;}
-    .plan h3 {color:#003399;}
-    .plan .price {font-size:20px; font-weight:bold;}
-    .btn {background:orange; color:white; border:none; padding:8px 15px; border-radius:5px; cursor:pointer;}
-    .benefits {display:flex; flex-wrap:wrap; justify-content:center; gap:15px; background:#f9f9f9; padding:15px;}
+    .tagline {font-size:13px; color:#333; margin:15px; padding:0 10px;}
+    .lang {font-size:11px; background:#ffeef0; padding:8px; margin:10px;}
+    .epaper-box {background:#fff8e6; border:2px solid orange; margin:15px; padding:20px; border-radius:10px;}
+    .epaper-box h2 {color:#003399; margin:5px 0; font-size:20px;}
+    .epaper-img {width:90%; max-width:300px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); cursor:pointer; margin:10px 0;}
+    .plans {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:20px 10px;}
+    .plan {border:1px solid #ddd; padding:15px; border-radius:8px; width:160px; background:#fff;}
+    .plan h3 {color:#003399; margin:5px 0;}
+    .price {font-size:20px; font-weight:bold; color:#003399;}
+    .btn {background:orange; color:white; border:none; padding:10px 20px; border-radius:5px; font-weight:bold; cursor:pointer;}
+    .benefits {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; background:#f9f9f9; padding:20px; margin:20px 0;}
     .benefit {width:100px; font-size:12px; color:#003399; font-weight:bold;}
-    .journalists {padding:20px;}
-    .card {padding:20px; border-radius:10px; color:white; margin:10px auto; width:200px;}
-    .orange {background:orange;}
-    .blue {background:#003399;}
-    .green {background:green;}
-    .card img {width:60px; height:60px; border-radius:50%;}
+    .journalists {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:20px;}
+    .card {padding:20px; border-radius:10px; color:white; width:180px;}
+    .card img {width:60px; height:60px; border-radius:50%; border:2px solid white;}
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo">
+    <!-- Title ke side me logo -->
+    <img src="logo-emblem.png" alt="Logo">
     <h1>THE PASHUPATINATH NEWS</h1>
   </header>
 
   <p class="tagline">"It's not just any news" - Nepal's most trusted news of faith and culture.</p>
-  
-  <div class="lang">
-    <b>News Language:</b> Hindi + English | <b>E-Paper Language:</b> Hindi + Sanskrit + English
-  </div>
+  <p class="lang">News Language: Hindi + English | E-Paper Language: Hindi + Sanskrit + English</p>
 
   <div class="epaper-box">
     <h2>DAILY E-PAPER</h2>
     <p><b>10 Pages | Tribhasha Daily E-Magazine</b></p>
     
-    <!-- Yaha touch karne pe e-paper khulega -->
+    <!-- Shiv ji wali image pe click karne se PDF khulegi -->
     <a href="epaper-10page.pdf" target="_blank">
-      <img src="epaper-cover.jpg" alt="E-Paper Cover" class="epaper-img">
+      <img src="logo-emblem.png" alt="E-Paper Cover" class="epaper-img">
     </a>
     <p>Click on Image to Read & Download</p>
   </div>
@@ -75,27 +70,8 @@
     <div class="benefit">🚫<br>Minimal Ads</div>
     <div class="benefit">📱<br>Mobile App Access</div>
     <div class="benefit">📰<br>e-Paper</div>
-    <div class="benefit">🎥<br>Exclusive Videos</div>
+    <div class="benefit">🎬<br>Exclusive Videos</div>
     <div class="benefit">🔔<br>Breaking Alerts</div>
-  </div>
-
-  <div class="journalists">
-    <h2>Journalists who write<br>For The Pashupatinath News</h2>
-    <div class="card orange">
-      <img src="aayush.jpg">
-      <h3>AAYUSH VAISHNAV</h3>
-      <p>CHIEF EDITOR + OWNER</p>
-    </div>
-    <div class="card blue">
-      <img src="rajesh.jpg">
-      <h3>Rajesh Sharma</h3>
-      <p>Senior Editor</p>
-    </div>
-    <div class="card green">
-      <img src="sita.jpg">
-      <h3>Sita Karki</h3>
-      <p>Temple Correspondent</p>
-    </div>
   </div>
 
 </body>
