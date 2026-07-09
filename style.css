@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* GOLDEN BACKGROUND + BLUE TITLE DESIGN */
+.news-header {
+  background: #FFD700; /* Golden Background */
+  text-align: center;
+  padding: 15px 10px;
+  border-bottom: 4px solid #000080; /* Blue line */
+}
+
+.news-header .the, 
+.news-header .pashu, 
+.news-header .news {
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  color: #000080; /* Blue Color */
+  letter-spacing: 2px;
+}
+
+.news-header .the { font-size: 22px; display: block; }
+.news-header .pashu { font-size: 32px; }
+.news-header .news { font-size: 32px; }
+
+.news-header .emblem {
+  height: 45px;
+  vertical-align: middle;
+  margin: 0 15px;
+  filter: brightness(0) saturate(100%) invert(10%) sepia(90%) saturate(5000%) hue-rotate(220deg); /* Logo Blue */
+}
+
+.tagline {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* E-PAPER BOX */
+.epaper-box {
+  background: #FFF8DC;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+}
+.epaper-img {
+  width: 200px;
+  border: 2px solid #000080;
+  border-radius: 5px;
+  cursor: pointer;
+}
