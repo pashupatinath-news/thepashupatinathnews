@@ -1,49 +1,108 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS</title>
+<title>The Pashupatinath News - Daily E-Paper Hindi Sanskrit English</title>
 <style>
-  body { font-family: Arial; background: #fff8e1; margin: 0; padding: 0; }
-  header { background: #b71c1c; color: white; text-align: center; padding: 15px; }
-  header h1 { margin: 0; font-size: 24px; }
-  .btn { background: gold; color: black; padding: 10px 20px; border: none; border-radius: 8px; font-weight: bold; margin-top: 10px; cursor: pointer; }
-  .ticker { background: #d32f2f; color: white; padding: 8px; overflow: hidden; white-space: nowrap;font-size: 14px; }
-  .ticker span { display: inline-block; padding-left: 100%; animation: scroll 35s linear infinite; }
-  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-100%); }
-  .content { padding: 15px; }
-  footer { text-align: center; padding: 10px; font-size: 12px; background: #eee; }
+body {font-family: Arial, sans-serif; margin:0; background:#fff; color:#333;}
+.header {text-align:center; padding:20px; border-bottom:3px solid #FF9933; background:#fff;}
+.header h1 {font-size:32px; letter-spacing:2px; margin:0; color:#002b7a;}
+.tagline {background:#fff9e6; padding:15px; display:flex; align-items:center; justify-content:center; gap:10px; border-bottom:1px solid #ddd;}
+.tagline img {width:50px;}
+.lang-note {padding:10px; background:#ffecec; text-align:center; font-size:14px;}
+.section {padding:40px 20px; max-width:1100px; margin:auto; text-align:center;}
+h2 {font-size:24px; margin-bottom:20px; color:#002b7a;}
+.epaper-box {background: #fff9e6; border:2px solid #FF9933; border-radius:12px; padding:20px;}
+.epaper-img {width:300px; max-width:90%; border:3px solid #002b7a; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); cursor:pointer; transition:0.3s;}
+.epaper-img:hover {transform:scale(1.03);}
+.plan-box {display:flex; gap:15px; justify-content:center; flex-wrap:wrap;}
+.plan {border:1px solid #ddd; padding:20px; width:250px; border-radius:8px; background:#fff;}
+.plan .btn {background:#FF9933; color:white; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; font-weight:bold;}
+.benefits {display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
+.benefit {width:120px;}
+.benefit .icon {width:60px; height:60px; background:#ffecec; border-radius:50%; margin:auto; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:8px;}
+.journalists {display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
+.journalist {width:250px; padding:20px; border-radius:10px; color:white;}
+.journalist img {width:80px; height:80px; border-radius:50%; border:3px solid white;}
+.testimonials {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+.card {border:1px solid #ddd; padding:15px; border-radius:8px; text-align:left; background:#fff;}
+footer {background:#002b7a; color:white; padding:30px 20px; text-align:center; margin-top:40px;}
+footer a {color:#FF9933; text-decoration:none;}
 </style>
 </head>
 <body>
 
-<header>
-  <h1>🔱 THE PASHUPATINATH NEWS 🔱</h1>
-  <p>सत्य की ओर, सच की ओर</p>
-  <button class="btn">SUBSCRIBE NOW</button>
-</header>
-
-<div class="ticker">
-  <span>BREAKING: आज की 10 बड़ी खबरें | मौसम अपडेट | खेल समाचार | राजनीति की ताजा खबर | THE PASHUPATINATH NEWS </span>
+<div class="header">
+  <h1>THE PASHUPATINATH NEWS</h1>
 </div>
 
-<div class="content">
-  <h2>दैनिक E PAPER</h2>
-  <p>आज | 4 अक्टूबर 2026 | शनिवार</p>
-  <a href="#">आज का E Paper Download करें</a>
-  
-  <h2>आज की 10 बड़ी खबरें</h2>
-  <p>1. भोपाल बारिश...<br>
- 2. पानी की समस्या...<br>
- 3. ट्रैफिक अपडेट...</p>
+<div class="tagline">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nepal_map.png" alt="">
+  <p><b>"It's not just any news"</b> - Nepal's most trusted news of faith and culture.</p>
+</div>
 
-  <h2>हमारी टीम</h2>
-  <p><b>Chief Editor</b><br>AAYUSH VAISHNAV</p>
+<div class="lang-note">
+  <b>News Language:</b> Hindi + English | <b>E-Paper Language:</b> Hindi + Sanskrit + English
+</div>
+
+<!-- E-PAPER SECTION -->
+<div class="section epaper-box">
+  <h2>DAILY E-PAPER</h2>
+  <p><b>10 Pages | Tribhasha Daily E-Magazine</b></p>
+  
+  <a href="epaper/today.pdf" download="PashupatinathNews_Epaper.pdf" target="_blank">
+   src="epaper-cover.jpg" alt="E-Paper Cover" class="epaper-img">
+  </a>
+  <p style="margin-top:10px;"><b>Click on Image to Read & Download</b></p>
+</div>
+
+<div class="section">
+  <h2>Choose Your Plan
+      <div class="plan-box">
+    <div class="plan"><b>All Access Pass</b><p>1 Year Plan</p><p><b>₹999</b></p><button class="btn">SUBSCRIBE</button></div>
+<div class="plan"><b>All Access Pass</b><p>2 Year Plan</p><p><b>₹1799</b></p><button class="btn">SUBSCRIBE</button></div>
+</div>
+
+<div class="section" style="background:#fafafa;">
+  <h2>Subscription Benefits</h2>
+  <div class="benefits">
+    <div class="benefit"><div class="icon">📖</div><p>Read without Limits</p></div>
+    <div class="benefit"><div class="icon">🚫</div><p>Minimal Ads</p></div>
+    <div class="benefit"><div class="icon">📱</div><p>Mobile App Access</p></div>
+    <div class="benefit"><div class="icon">📰</div><p>e-Paper</p></div>
+    <div class="benefit"><div class="icon">🎥</div><p>Exclusive Videos</p></div>
+    <div class="benefit"><div class="icon">🔔</div><p>Breaking Alerts</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Journalists who write</h2>
+  <p>For The Pashupatinath News</p>
+  <div class="journalists">
+    <div class="journalist" style="background:#FF9933;"><img src="https://i.pravatar.cc/80?1"><h3>AAYUSH VAISHNAV</h3><p>CHIEF EDITOR + OWNER</p></div>
+    <div class="journalist" style="background:#002b7a;"><img src="https://i.pravatar.cc/80?2"><h3>Rajesh Sharma</h3><p>Senior Editor</p></div>
+    <div class="journalist" style="background:#138808;"><img src="https://i.pravatar.cc/80?3"><h3>Sita Karki</h3><p>Temple Correspondent</p></div>
+  </div>
+</div>
+
+<div class="section" style="background:#fafafa;">
+  <h2>See what our users say</h2>
+  <div class="testimonials">
+    <div class="card"><b>Ramesh P.</b><p>The Pashupatinath News has been my daily source for temple updates and faith news.</p></div>
+    <div class="card"><b>Priya K.</b><p>Best website for authentic news about Pashupatinath Temple and festivals.</p></div>
+    <div class="card"><b>Amit S.</b><p>Clean design and fast loading. Love the daily darshan updates.</p></div>
+    <div class="card"><b>Anita R.</b><p>Most trusted source for Pashupatinath news in Nepal.</p></div>
+  </div>
 </div>
 
 <footer>
-  © 2026 THE PASHUPATINATH NEWS | Instagram | WhatsApp: 9303100358
+  <p><b>CHIEF EDITOR + OWNER: AAYUSH VAISHNAV</b></p>
+  <p>📍 ADDRESS: VILLAGE KASHI, POST - GUJRA, BLOCK - PATAN, DISTRICT - DURG, STATE - CHHATTISGARH, INDIA</p>
+  <p>📞 <a href="https://wa.me/919303100358" target="_blank">WhatsApp/Call: 9303100358</a></p>
+  <p>📸 <a href="https://www.instagram.com/aayush_vaishnav_1" target="_blank">Instagram: @aayush_vaishnav_1</a></p>
+  <hr style="border:1px solid #444; margin:15px 0;">
+  <p>© 2026 The Pashupatinath News. All Rights Reserved.</p>
 </footer>
 
 </body>
