@@ -5,149 +5,125 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE PASHUPATINATH NEWS - INDIA EDITION</title>
 <style>
-  body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; color:#333; }
-  header { background:#B30000; color:#fff; padding:12px 20px; text-align:center; position:sticky; top:0; z-index:999; }
-  header h1 { margin:5px 0; font-size:24px; }
-  header p { margin:0; font-size:14px; }
-  nav { background:#000; padding:10px; text-align:center; position:sticky; top:55px; z-index:999; }
-  nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
-  nav a:hover { color:#FFD700; }
+  *{margin:0; padding:0; box-sizing:border-box;}
+  body { font-family: Arial, sans-serif; background:#fff; color:#333; }
   
+  header { background:#fff; color:#D4AF37; padding:12px 15px; text-align:center; position:sticky; top:0; z-index:999; border-bottom:2px solid #D4AF37; }
+  .header-top { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:#000; margin-bottom:5px; }
+  header h1 { font-size:22px; font-weight:800; color:#D4AF37; letter-spacing:1px; }
+
+  .cat-slider { background:#000; padding:8px 5px; overflow-x:auto; white-space:nowrap; position:sticky; top:68px; z-index:998; }
+  .cat-slider::-webkit-scrollbar{display:none;}
+  .cat-slider a { display:inline-block; color:#fff; padding:8px 14px; margin:0 4px; text-decoration:none; font-weight:bold; font-size:14px; border-radius:20px; background:#222; transition:0.3s; }
+  .cat-slider a:hover { background:#D4AF37; color:#000; }
+
   .container { max-width:1200px; margin:auto; padding:15px; }
 
-  .breaking-card {
-    background: #fff; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-    padding: 18px; margin: 25px 0; text-align: center; border-top: 4px solid #B30000;
-  }
-  .breaking-card h2 { color: #B30000; font-size: 22px; margin-bottom: 12px; font-weight: 700; }
-  .breaking-card img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
-  .breaking-card h3 { color: #B30000; font-size: 20px; margin: 8px 0; }
-  
-  .category-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px; margin: 25px 0;
-  }
-  .cat-card {
-    background: #fff; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    overflow: hidden; transition: 0.3s ease; text-decoration: none; color: inherit;
-  }
-  .cat-card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-  .cat-card img { width: 100%; height: 170px; object-fit: cover; }
-  .cat-card .content { padding: 12px 14px; }
-  .cat-card h4 { font-size: 17px; margin: 0; color: #000; font-weight: 700; }
-  .cat-card p { font-size: 13px; color: #666; margin: 6px 0 0; }
+  .epaper-btn { text-align:center; margin:15px 0; }
+  .epaper-btn img { width:100%; max-width:500px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.2); cursor:pointer; transition:0.3s; }
+  .epaper-btn img:hover { transform:scale(1.02); }
 
-  .section-title { text-align:center; margin:30px 0 10px; color:#B30000; font-size:24px; border-bottom:2px solid #B30000; padding-bottom:5px; }
+  .breaking-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1); padding: 18px; margin: 20px 0; text-align: center; border-top: 4px solid #D4AF37; }
+  .breaking-card h2 { color: #D4AF37; font-size: 20px; margin-bottom: 12px; font-weight: 700; }
+  .breaking-card img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
+  .breaking-card h3 { color: #D4AF37; font-size: 18px; margin: 8px 0; }
 
-  .news-card-3lang {
-    background: #fff; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    margin: 20px 0; padding: 15px; scroll-margin-top: 120px; /* sticky header ke liye */
-  }
-  .news-card-3lang img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
-  .news-card-3lang h3 { color: #B30000; font-size: 18px; margin-bottom: 8px; }
-  .lang-box { margin: 8px 0; padding: 10px; background: #f9f9f9; border-left: 4px solid #B30000; border-radius: 5px; }
-  .lang-box b { color: #000; }
+  .section-title { color:#D4AF37; text-align:center; margin:20px 0 10px; font-size:22px; border-bottom:2px solid #D4AF37; padding-bottom:5px; }
 
-  footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:30px; }
-  @media(max-width:768px){ .breaking-card img{height:200px;} }
+  .news-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:15px; margin:20px 0; }
+  .news-box { background:#fff; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.08); padding:12px; text-decoration:none; color:inherit; display:block; transition:0.3s; }
+  .news-box:hover { transform:translateY(-5px); box-shadow:0 6px 20px rgba(0,0,0,0.12); }
+  .news-box h4 { color:#D4AF37; font-size:16px; margin-bottom:8px; }
+  .lang-line { font-size:13px; padding:6px; margin:4px 0; background:#f9f9f9; border-left:3px solid #D4AF37; border-radius:4px; }
+
+  .social-bar { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:25px 0; }
+  .social-btn { padding:10px 15px; background:#D4AF37; color:#000; text-decoration:none; border-radius:8px; font-weight:bold; font-size:14px; transition:0.3s; }
+  .social-btn:hover { background:#000; color:#D4AF37; }
+
+  .address { background:#f5f5f5; padding:15px; border-radius:10px; text-align:center; margin:20px 0; font-size:14px; line-height:1.6; }
+
+  footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:20px; font-size:14px; }
+  @media(max-width:768px){ .breaking-card img{height:200px;} header h1{font-size:18px;} }
 </style>
 </head>
 <body>
 
 <header>
+  <div class="header-top">
+    <span id="live-time"></span>
+    <span id="weather">Chhattisgarh: 28°C</span>
+  </div>
   <h1>THE PASHUPATINATH NEWS</h1>
-  <p><span id="live-time"></span></p> <!-- LIVE TIME -->
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#india">India</a>
-  <a href="#tech">Tech</a>
-  <a href="#cricket">Cricket</a>
-  <a href="#political">Political</a>
-  <a href="#contact">Contact</a>
+<nav class="cat-slider">
+  <a href="index.html">HOME</a>
+  <a href="#international">INTERNATIONAL</a>
+  <a href="#india">INDIA</a>
+  <a href="#politics">POLITICS</a>
+  <a href="#sports">SPORTS</a>
+  <a href="#chhattisgarh">CHHATTISGARH</a>
+  <a href="#delhi">DELHI</a>
+  <a href="#mumbai">MUMBAI</a>
+  <a href="#nagpur">NAGPUR</a>
+  <a href="#crime">CRIME</a>
+  <a href="#tech">TECH</a>
 </nav>
 
 <div class="container">
 
-<!-- 1. BREAKING HEADLINE BOX -->
-<div class="breaking-card" id="home">
+<div class="epaper-btn">
+  <a href="epaper.html" target="_blank">
+    <img src="https://i.imgur.com/8Qz9wQp.png" alt="THE PASHUPATINATH NEWS DAILY TRIBHASHA E-PAPER">
+  </a>
+</div>
+
+<div class="breaking-card">
   <h2>🔥 Breaking Headline</h2>
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Breaking News">
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Breaking">
   <h3>Pashupatinath News Launches New Digital Platform</h3>
   <p>Read the latest news from India and around the world in Hindi, English and Sanskrit.</p>
 </div>
 
-<!-- 2. CATEGORY GRID WITH IMAGE -->
-<h2 class="section-title">Categories</h2>
-<div class="category-grid">
-  
-  <a href="#india" class="cat-card">
-    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500" alt="India">
-    <div class="content"><h4>INDIA</h4><p>देश भर की ताजा खबरें</p></div>
+<h2 class="section-title">Latest News</h2>
+<div class="news-list">
+
+  <a href="news1.html" class="news-box">
+    <h4>News 1</h4>
+    <div class="lang-line"><b>Hindi:</b> छत्तीसगढ़ में नई योजना की घोषणा</div>
+    <div class="lang-line"><b>English:</b> New scheme announced in Chhattisgarh</div>
+    <div class="lang-line"><b>Sanskrit:</b> छत्तीसगढे नूतन योजना घोषणा</div>
   </a>
 
-  <a href="#tech" class="cat-card">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Tech">
-    <div class="content"><h4>TECH</h4><p>Technology and Gadget news</p></div>
+  <a href="news2.html" class="news-box">
+    <h4>News 2</h4>
+    <div class="lang-line"><b>Hindi:</b> भारत ने जीता आज का क्रिकेट मैच</div>
+    <div class="lang-line"><b>English:</b> India won today's cricket match</div>
+    <div class="lang-line"><b>Sanskrit:</b> भारतः अद्य क्रीकेट स्पर्धां विजितवान्</div>
   </a>
 
-  <a href="#cricket" class="cat-card">
-    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500" alt="Cricket">
-    <div class="content"><h4>CRICKET</h4><p>Cricket match updates and scores</p></div>
-  </a>
-
-  <a href="#political" class="cat-card">
-    <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=500" alt="Political">
-    <div class="content"><h4>POLITICAL</h4><p>राजनीति की बड़ी खबरें</p></div>
+  <a href="news3.html" class="news-box">
+    <h4>News 3</h4>
+    <div class="lang-line"><b>Hindi:</b> दिल्ली में नया मेट्रो रूट शुरू</div>
+    <div class="lang-line"><b>English:</b> New metro route started in Delhi</div>
+    <div class="lang-line"><b>Sanskrit:</b> दिल्ली नगरे नूतन मेट्रो मार्गः आरब्धः</div>
   </a>
 
 </div>
 
-<!-- 3. INDIA NEWS SECTION -->
-<h2 class="section-title" id="india">INDIA NEWS</h2>
-<div class="news-card-3lang">
-  <img src="https://images.unsplash.com/photo-1588681664895-905115478192?w=800" alt="India News">
-  <h3>New Education Policy Announced</h3>
-  <div class="lang-box"><b>Hindi:</b> नई शिक्षा नीति की घोषणा की गई, जिससे छात्रों को बड़े फायदे होंगे।</div>
-  <div class="lang-box"><b>English:</b> New Education Policy announced, which will bring big benefits to students.</div>
-  <div class="lang-box"><b>Sanskrit:</b> नूतन शिक्षा नीतिः घोषिता, यया छात्राणां महत् लाभः भविष्यति।</div>
+<div class="social-bar">
+  <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="social-btn">📷 Instagram</a>
+  <a href="https://wa.me/919303100358" target="_blank" class="social-btn">💬 WhatsApp</a>
+  <a href="https://youtube.com/@newsman-view?si=GEnJxoWgYNa3IkPu" target="_blank" class="social-btn">▶️ YouTube</a>
+  <a href="https://www.youtube.com/feed/trending" target="_blank" class="social-btn">🔥 Trending</a>
+  <a href="tel:9303100358" class="social-btn">📞 Call Now</a>
 </div>
 
-<!-- 4. TECH NEWS SECTION -->
-<h2 class="section-title" id="tech">TECH NEWS</h2>
-<div class="news-card-3lang">
-  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Tech News">
-  <h3>New 5G Phone Launched in India</h3>
-  <div class="lang-box"><b>Hindi:</b> भारत में नया 5G फोन लॉन्च हुआ, कीमत 15 हजार से शुरू।</div>
-  <div class="lang-box"><b>English:</b> New 5G phone launched in India, price starts from 15 thousand.</div>
-  <div class="lang-box"><b>Sanskrit:</b> भारते नूतनः 5G दूरभाषः लब्धः, मूल्यं पञ्चदश सहस्रात् आरभ्यते।</div>
-</div>
-
-<!-- 5. CRICKET NEWS SECTION -->
-<h2 class="section-title" id="cricket">CRICKET NEWS</h2>
-<div class="news-card-3lang">
-  <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800" alt="Cricket News">
-  <h3>India Wins T20 Match Against Australia</h3>
-  <div class="lang-box"><b>Hindi:</b> भारत ने ऑस्ट्रेलिया के खिलाफ T20 मैच 5 विकेट से जीता।</div>
-  <div class="lang-box"><b>English:</b> India won the T20 match against Australia by 5 wickets.</div>
-  <div class="lang-box"><b>Sanskrit:</b> भारतः ऑस्ट्रेलिया विरुद्ध T20 स्पर्धां पञ्च विकेटैः विजितवान्।</div>
-</div>
-
-<!-- 6. POLITICAL NEWS SECTION -->
-<h2 class="section-title" id="political">POLITICAL NEWS</h2>
-<div class="news-card-3lang">
-  <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800" alt="Political News">
-  <h3>Parliament Winter Session Begins</h3>
-  <div class="lang-box"><b>Hindi:</b> संसद का शीतकालीन सत्र आज से शुरू, कई बड़े बिल पेश होंगे।</div>
-  <div class="lang-box"><b>English:</b> Parliament's winter session begins today, many big bills to be introduced.</div>
-  <div class="lang-box"><b>Sanskrit:</b> संसदः हेमन्त अधिवेशनम् अद्य आरभते, बहवः महत्त्वपूर्णाः विधेयकाः प्रस्तुताः भविष्यन्ति।</div>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" style="background:#fff; padding:20px; border-radius:10px; margin-top:30px;">
-  <h2 style="color:#B30000;">Contact Us</h2>
-  <p>Email: contact@pashupatinathnews.com</p>
+<div class="address">
+  <b>Address:</b><br>
+  VILLAGE - KASHI, POST - GUJRA, BLOCK - PATAN<br>
+  DISTRICT - DURG, STATE CHHATTISGARH, INDIA<br>
+  PINCODE - 491111
 </div>
 
 </div>
@@ -157,14 +133,17 @@
 </footer>
 
 <script>
-// LIVE TIME SCRIPT
 function updateTime(){
   const now = new Date();
-  const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
-  document.getElementById("live-time").innerText = now.toLocaleString('en-IN', options) + " | Bhilai";
+  document.getElementById("live-time").innerText = now.toLocaleString('en-IN', {day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'}) + " | Bhilai";
 }
-setInterval(updateTime, 1000);
-updateTime();
+setInterval(updateTime, 1000); updateTime();
+
+// Weather - agar API key nahi hai to 28°C rahega
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Raipur,in&units=metric&appid=demo')
+.then(res => res.json()).then(data => {
+  if(data.main) document.getElementById("weather").innerText = `Chhattisgarh: ${Math.round(data.main.temp)}°C`;
+});
 </script>
 
 </body>
