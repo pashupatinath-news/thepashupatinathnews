@@ -19,9 +19,17 @@
 
   .container { max-width:1200px; margin:auto; padding:15px; }
 
+  /* E-PAPER TEXT BUTTON */
   .epaper-btn { text-align:center; margin:15px 0; }
-  .epaper-btn img { width:100%; max-width:500px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.2); cursor:pointer; transition:0.3s; }
-  .epaper-btn img:hover { transform:scale(1.02); }
+  .epaper-btn a { display:inline-block; padding:12px 20px; background:#D4AF37; color:#000; text-decoration:none; border-radius:10px; font-weight:800; font-size:15px; box-shadow:0 3px 10px rgba(0,0,0,0.2); }
+  .epaper-btn a:hover { background:#000; color:#D4AF37; }
+
+  /* RED BREAKING TICKER */
+  .breaking-ticker { background:#b30000; color:#fff; padding:10px 0; overflow:hidden; position:relative; margin:10px 0; }
+  .ticker-wrap { display:flex; width:200%; animation: slide 25s linear infinite; }
+  .ticker-item { width:100%; display:flex; gap:40px; padding:0 20px; align-items:center; font-weight:bold; font-size:14px; }
+  .ticker-lang { min-width:300px; }
+  @keyframes slide { 0% {transform: translateX(0);} 100% {transform: translateX(-50%);} }
 
   .breaking-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1); padding: 18px; margin: 20px 0; text-align: center; border-top: 4px solid #D4AF37; }
   .breaking-card h2 { color: #D4AF37; font-size: 20px; margin-bottom: 12px; font-weight: 700; }
@@ -30,10 +38,13 @@
 
   .section-title { color:#D4AF37; text-align:center; margin:20px 0 10px; font-size:22px; border-bottom:2px solid #D4AF37; padding-bottom:5px; }
 
+  /* LATEST NEWS WITH IMAGE */
   .news-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:15px; margin:20px 0; }
-  .news-box { background:#fff; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.08); padding:12px; text-decoration:none; color:inherit; display:block; transition:0.3s; }
+  .news-box { background:#fff; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.08); padding:0; text-decoration:none; color:inherit; display:block; transition:0.3s; overflow:hidden; }
   .news-box:hover { transform:translateY(-5px); box-shadow:0 6px 20px rgba(0,0,0,0.12); }
-  .news-box h4 { color:#D4AF37; font-size:16px; margin-bottom:8px; }
+  .news-img { width:100%; height:180px; object-fit:cover; }
+  .news-content { padding:12px; }
+  .news-content h4 { color:#D4AF37; font-size:16px; margin-bottom:8px; }
   .lang-line { font-size:13px; padding:6px; margin:4px 0; background:#f9f9f9; border-left:3px solid #D4AF37; border-radius:4px; }
 
   .social-bar { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:25px 0; }
@@ -43,7 +54,7 @@
   .address { background:#f5f5f5; padding:15px; border-radius:10px; text-align:center; margin:20px 0; font-size:14px; line-height:1.6; }
 
   footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:20px; font-size:14px; }
-  @media(max-width:768px){ .breaking-card img{height:200px;} header h1{font-size:18px;} }
+  @media(max-width:768px){ .breaking-card img{height:200px;} header h1{font-size:18px;} .news-img{height:160px;} .ticker-item{font-size:12px;} }
 </style>
 </head>
 <body>
@@ -72,12 +83,28 @@
 
 <div class="container">
 
+<!-- E-PAPER TEXT BUTTON -->
 <div class="epaper-btn">
-  <a href="epaper.html" target="_blank">
-    <img src="https://i.imgur.com/8Qz9wQp.png" alt="THE PASHUPATINATH NEWS DAILY TRIBHASHA E-PAPER">
-  </a>
+  <a href="epaper.html" target="_blank">THE PASHUPATINATH NEWS TRIBHASHA DAILY E-PAPER</a>
 </div>
 
+<!-- RED BREAKING TICKER 3 LANGUAGE -->
+<div class="breaking-ticker">
+  <div class="ticker-wrap">
+    <div class="ticker-item">
+      <span class="ticker-lang">Hindi: बड़ी खबर - पशुपतिनाथ न्यूज का नया डिजिटल प्लेटफॉर्म लॉन्च</span>
+      <span class="ticker-lang">English: Big News - Pashupatinath News launches new digital platform</span>
+      <span class="ticker-lang">Sanskrit: महत्त्वपूर्ण समाचारः - पशुपतिनाथ समाचारस्य नूतन डिजिटल मञ्चस्य उद्घाटनम्</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-lang">Hindi: बड़ी खबर - पशुपतिनाथ न्यूज का नया डिजिटल प्लेटफॉर्म लॉन्च</span>
+      <span class="ticker-lang">English: Big News - Pashupatinath News launches new digital platform</span>
+      <span class="ticker-lang">Sanskrit: महत्त्वपूर्ण समाचारः - पशुपतिनाथ समाचारस्य नूतन डिजिटल मञ्चस्य उद्घाटनम्</span>
+    </div>
+  </div>
+</div>
+
+<!-- BREAKING CARD -->
 <div class="breaking-card">
   <h2>🔥 Breaking Headline</h2>
   <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Breaking">
@@ -88,37 +115,51 @@
 <h2 class="section-title">Latest News</h2>
 <div class="news-list">
 
+  <!-- NEWS 1 -->
   <a href="news1.html" class="news-box">
-    <h4>News 1</h4>
-    <div class="lang-line"><b>Hindi:</b> छत्तीसगढ़ में नई योजना की घोषणा</div>
-    <div class="lang-line"><b>English:</b> New scheme announced in Chhattisgarh</div>
-    <div class="lang-line"><b>Sanskrit:</b> छत्तीसगढे नूतन योजना घोषणा</div>
+    <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716f73d?w=600" class="news-img" alt="News1">
+    <div class="news-content">
+      <h4>News 1</h4>
+      <div class="lang-line"><b>Hindi:</b> छत्तीसगढ़ में नई योजना की घोषणा</div>
+      <div class="lang-line"><b>English:</b> New scheme announced in Chhattisgarh</div>
+      <div class="lang-line"><b>Sanskrit:</b> छत्तीसगढे नूतन योजना घोषणा</div>
+    </div>
   </a>
 
+  <!-- NEWS 2 -->
   <a href="news2.html" class="news-box">
-    <h4>News 2</h4>
-    <div class="lang-line"><b>Hindi:</b> भारत ने जीता आज का क्रिकेट मैच</div>
-    <div class="lang-line"><b>English:</b> India won today's cricket match</div>
-    <div class="lang-line"><b>Sanskrit:</b> भारतः अद्य क्रीकेट स्पर्धां विजितवान्</div>
+    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600" class="news-img" alt="News2">
+    <div class="news-content">
+      <h4>News 2</h4>
+      <div class="lang-line"><b>Hindi:</b> भारत ने जीता आज का क्रिकेट मैच</div>
+      <div class="lang-line"><b>English:</b> India won today's cricket match</div>
+      <div class="lang-line"><b>Sanskrit:</b> भारतः अद्य क्रीकेट स्पर्धां विजितवान्</div>
+    </div>
   </a>
 
+  <!-- NEWS 3 -->
   <a href="news3.html" class="news-box">
-    <h4>News 3</h4>
-    <div class="lang-line"><b>Hindi:</b> दिल्ली में नया मेट्रो रूट शुरू</div>
-    <div class="lang-line"><b>English:</b> New metro route started in Delhi</div>
-    <div class="lang-line"><b>Sanskrit:</b> दिल्ली नगरे नूतन मेट्रो मार्गः आरब्धः</div>
+    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" class="news-img" alt="News3">
+    <div class="news-content">
+      <h4>News 3</h4>
+      <div class="lang-line"><b>Hindi:</b> दिल्ली में नया मेट्रो रूट शुरू</div>
+      <div class="lang-line"><b>English:</b> New metro route started in Delhi</div>
+      <div class="lang-line"><b>Sanskrit:</b> दिल्ली नगरे नूतन मेट्रो मार्गः आरब्धः</div>
+    </div>
   </a>
 
 </div>
 
+<!-- TERE ORIGINAL BUTTONS -->
 <div class="social-bar">
   <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="social-btn">📷 Instagram</a>
   <a href="https://wa.me/919303100358" target="_blank" class="social-btn">💬 WhatsApp</a>
   <a href="https://youtube.com/@newsman-view?si=GEnJxoWgYNa3IkPu" target="_blank" class="social-btn">▶️ YouTube</a>
   <a href="https://www.youtube.com/feed/trending" target="_blank" class="social-btn">🔥 Trending</a>
-  <a href="tel:9303100358" class="social-btn">📞 Call Now</a>
+  <a href="tel:9303100358" class="social-btn">📞 Call: 9303100358</a>
 </div>
 
+<!-- TERA ORIGINAL ADDRESS -->
 <div class="address">
   <b>Address:</b><br>
   VILLAGE - KASHI, POST - GUJRA, BLOCK - PATAN<br>
@@ -139,7 +180,6 @@ function updateTime(){
 }
 setInterval(updateTime, 1000); updateTime();
 
-// Weather - agar API key nahi hai to 28°C rahega
 fetch('https://api.openweathermap.org/data/2.5/weather?q=Raipur,in&units=metric&appid=demo')
 .then(res => res.json()).then(data => {
   if(data.main) document.getElementById("weather").innerText = `Chhattisgarh: ${Math.round(data.main.temp)}°C`;
