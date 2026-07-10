@@ -3,105 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS - TRIBHASHA EDITION</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+<title>THE PASHUPATINATH NEWS</title>
 <style>
-body{margin:0; padding:0; font-family:'Noto Serif', serif; background:#f5f5f5;}
-.topbar{background:#8B0000; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:8px 15px; font-size:14px; flex-wrap:wrap;}
-.topbar-left, .topbar-right{display:flex; gap:15px; align-items:center;}
-.header{background:#fff; text-align:center; padding:15px; border-bottom:3px solid #8B0000;}
-.header h1{margin:0; color:#8B0000; font-size:30px; letter-spacing:1px;}
-.header p{margin:5px 0 0; color:#333; font-size:13px; font-weight:bold;}
-.social-icons a{margin:0 8px; color:#fff; text-decoration:none; font-weight:bold; background:rgba(255,255,255,0.1); padding:5px 10px; border-radius:4px;}
-.social-icons a:hover{background:rgba(255,255,255,0.2);}
-.container{max-width:1200px; margin:0 auto; padding:15px;}
-.epaper-btn{display:block; background:linear-gradient(90deg,#8B0000,#A00000); color:#fff; text-align:center; padding:14px; font-weight:bold; font-size:16px; text-decoration:none; letter-spacing:1px; border-radius:6px; margin:15px 0; box-shadow:0 3px 8px rgba(0,0,0,0.2);}
-.epaper-btn:hover{background:linear-gradient(90deg,#A00000,#B00000);}
-.ticker{background:#000; color:#FFD700; padding:10px; overflow:hidden; white-space:nowrap; margin:10px 0; font-weight:bold;}
-.ticker span{display:inline-block; padding-left:100%; animation:scroll 40s linear infinite;}
-@keyframes scroll{0%{transform:translate(0,0);} 100%{transform:translate(-100%,0);}}
-.news-section{background:#fff; padding:20px; margin-top:15px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-.tri-news{border-left:4px solid #8B0000; padding-left:10px; margin:15px 0;}
-.tri-news .hi{color:#000; font-weight:bold;}
-.tri-news .en{color:#0047AB;}
-.tri-news .sa{color:#8B4513; font-style:italic;}
-.footer{background:#222; color:#fff; text-align:center; padding:20px; margin-top:20px; font-size:14px;}
-.footer a{color:#FFD700; text-decoration:none; margin:0 10px; font-weight:bold;}
-@media(max-width:768px){.topbar{flex-direction:column; gap:8px;} .social-icons{flex-wrap:wrap; justify-content:center;}}
+body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
+.top-bar{display:flex; justify-content:space-between; padding:6px 20px; font-size:12px; background:#fff; color:#333;}
+.logo-bar{text-align:center; padding:10px; background:#fff;}
+.logo{color:#D4AF37; font-weight:900; font-size:22px; letter-spacing:1px;}
+.navbar{background:#000; display:flex; justify-content:center; flex-wrap:wrap; padding:5px 0;}
+.navbar a{color:#fff; padding:10px 12px; text-decoration:none; font-size:13px; font-weight:bold;}
+.navbar a:hover{background:#333;}
+
+/* YE HI E-PAPER BUTTON HAI */
+.epaper-btn{background:#000; color:#FFD700; text-align:center; padding:12px; margin:8px 15px; font-weight:bold; font-size:14px; border-radius:3px; cursor:pointer; text-decoration:none; display:block; border:1px solid #FFD700;}
+.epaper-btn:hover{background:#222;}
+
+.ticker{background:#B00000; color:#fff; padding:8px; display:flex; justify-content:space-around; font-size:13px; font-weight:bold; overflow:hidden;}
+.breaking{background:#fff; text-align:center; padding:8px; font-weight:bold; color:#B00000; font-size:14px;}
+.main-section{text-align:center; padding:15px; background:#fff; margin:10px;}
+.main-img{width:95%; max-width:900px; margin:10px auto; display:block; border-radius:6px;}
+.main-title{color:#B00000; font-size:18px; font-weight:bold; margin:10px 0;}
+.main-desc{font-size:14px; color:#333;}
+
+.latest-head{text-align:center; color:#B00000; font-size:22px; margin:20px 0 10px; font-weight:bold;}
+.news-grid{display:flex; gap:15px; padding:0 15px 20px; flex-wrap:wrap; justify-content:center;}
+.news-card{background:#fff; width:30%; min-width:280px; padding:12px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.news-card h4{color:#B00000; margin:5px 0; font-size:15px;}
+.news-card img{width:100%; height:160px; object-fit:cover; border-radius:4px; margin:8px 0;}
+.news-card p{font-size:13px; line-height:1.6; margin:4px 0;}
+
+.social-btns{text-align:center; margin:20px 0;}
+.social-btns a{display:inline-block; margin:5px; padding:8px 14px; border-radius:20px; text-decoration:none; font-size:13px; color:#fff; font-weight:bold;}
+.btn-insta{background:linear-gradient(45deg,#f09433,#dc2743);}
+.btn-whatsapp{background:#25D366;}
+.btn-youtube{background:#FF0000;}
+.btn-trending{background:#FFA500; color:#000;}
+.btn-call{background:#FFD700; color:#000;}
+
+.address{background:#eee; text-align:center; padding:15px; font-size:13px; line-height:1.8;}
+.footer{background:#000; color:#fff; text-align:center; padding:15px; font-size:12px;}
+.footer a{color:#ccc; margin:0 10px; text-decoration:none;}
+.footer a:hover{color:#fff;}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topbar-left">
-    <span id="live-time"></span> | 
-    <span id="weather">Patan: 32°C ☀️</span>
+<div class="top-bar">
+  <span>11 Jul 2026, 12:56:03 am | Bhan</span>
+  <span>Chhattisgarh: 28°C</span>
+</div>
+
+<div class="logo-bar">
+  <div class="logo">THE PASHUPATINATH NEWS</div>
+</div>
+
+<div class="navbar">
+  <a href="#">HOME</a><a href="#">INTERNATIONAL</a><a href="#">INDIA</a><a href="#">POLITICS</a>
+  <a href="#">SPORTS</a><a href="#">CHHATTISGARH</a><a href="#">DELHI</a><a href="#">MUMBAI</a>
+  <a href="#">NAGPUR</a><a href="#">CRIME</a>
+</div>
+
+<!-- YAHI BUTTON HAI - ISSE EPAPER.HTML KHULEGA -->
+<a href="epaper.html" class="epaper-btn">THE PASHUPATINATH NEWS TRIBHASHA DAILY E-PAPER</a>
+
+<div class="ticker">
+  <span>Hindi: पशुपतिनाथ न्यूज का डिजिटल लॉन्च</span>
+  <span>English: Big News - Pashupatinath News launches new digital platform</span>
+  <span>Sanskrit: पशुपतिनाथ वार्ता डिजिटल मञ्चम्</span>
+</div>
+
+<div class="breaking">🔥 Breaking Headline</div>
+
+<div class="main-section">
+  <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200" class="main-img">
+  <div class="main-title">Pashupatinath News Launches New Digital Platform</div>
+  <p class="main-desc">Read the latest news from India and around the world in Hindi, English and Sanskrit.</p>
+</div>
+
+<div class="latest-head">Latest News</div>
+
+<div class="news-grid">
+  <div class="news-card">
+    <h4>News 1</h4>
+    <p><b>Hindi:</b> छत्तीसगढ़ में नई योजना की घोषणा</p>
+    <p><b>English:</b> New scheme announced in Chhattisgarh</p>
+    <p><b>Sanskrit:</b> छत्तीसगढे नूतना योजना घोषणा</p>
   </div>
-  <div class="topbar-right social-icons">
-    <a href="https://wa.me/919303100358" target="_blank">WhatsApp</a>
-    <a href="https://youtube.com/@newsman-view?si=Nh7IP-4LoLaK4CqS" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank">Instagram</a>
-    <a href="tel:9303100358">📞 9303100358</a>
+  <div class="news-card">
+    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600">
+    <h4>News 2</h4>
+    <p><b>Hindi:</b> भारत ने आज मैच जीत लिया</p>
+    <p><b>English:</b> India won today's cricket match</p>
+    <p><b>Sanskrit:</b> भारतः अद्य क्रीडा स्पर्धां जिगाय</p>
+  </div>
+  <div class="news-card">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600">
+    <h4>News 3</h4>
+    <p><b>Hindi:</b> दिल्ली में नया मेट्रो रूट शुरू</p>
+    <p><b>English:</b> New metro route started in Delhi</p>
+    <p><b>Sanskrit:</b> दिल्ली नगर्यां नूतनः मार्गः</p>
   </div>
 </div>
 
-<div class="header">
-  <h1>THE PASHUPATINATH NEWS</h1>
-  <p>TRIBHASHA EDITION | PATAN, CHHATTISGARH</p>
+<div class="social-btns">
+  <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="btn-insta">📷 Instagram</a>
+  <a href="https://wa.me/919303100358" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+  <a href="https://youtube.com/@newsman-view?si=Nh7IP-4LoLaK4CqS" target="_blank" class="btn-youtube">▶️ YouTube</a>
+  <a href="#" class="btn-trending">📈 Trending</a>
+  <a href="tel:9303100358" class="btn-call">📞 Call 9303100358</a>
 </div>
 
-<div class="container">
-  
-  <!-- E-PAPER BUTTON -->
-  <a href="epaper.html" class="epaper-btn">
-    THE PASHUPATINATH NEWS TRIBHASHA DAILY E - PAPER
-  </a>
-  
-  <!-- 3 LANGUAGE BREAKING TICKER -->
-  <div class="ticker">
-    <span>
-      Hindi: ताजा खबर - पाटन में नई सड़क योजना शुरू | 
-      English: Breaking News - New road scheme launched in Patan | 
-      Sanskrit: प्रवृत्तिः - पाटने नूतनं मार्ग योजना प्रारम्भा ||
-    </span>
-  </div>
-
-  <div class="news-section">
-    <h2>आज की मुख्य खबर</h2>
-    
-    <!-- HAR NEWS 3 LANGUAGE ME AISE POST KARNA -->
-    <div class="tri-news">
-      <p class="hi">Hindi: छत्तीसगढ़ सरकार ने किसानों के लिए नई योजना शुरू की</p>
-      <p class="en">English: Chhattisgarh government launched new scheme for farmers</p>
-      <p class="sa">Sanskrit: छत्तीसगढ शासनं कृषकेभ्यः नूतनां योजनां प्रारम्भयत्</p>
-    </div>
-    
-    <div class="tri-news">
-      <p class="hi">Hindi: भारत ने विश्व कप में शानदार जीत दर्ज की</p>
-      <p class="en">English: India registered a great win in World Cup</p>
-      <p class="sa">Sanskrit: भारतः विश्वकपे भव्यं विजयं अलभत</p>
-    </div>
-
-  </div>
-
+<div class="address">
+  <b>Address:</b><br>
+  VILLAGE - KASAI, POST - SURA, BLOCK - PATAN<br>
+  DISTRICT - DURG, STATE CHHATTISGARH, INDIA<br>
+  PINCODE - 491111
 </div>
 
 <div class="footer">
-  <a href="https://wa.me/919303100358" target="_blank">WhatsApp</a>
-  <a href="https://youtube.com/@newsman-view?si=Nh7IP-4LoLaK4CqS" target="_blank">YouTube</a>
-  <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank">Instagram</a>
-  <a href="tel:9303100358">Call: 9303100358</a>
-  <p>© 2026 THE PASHUPATINATH NEWS. All Rights Reserved.</p>
+  <a href="#">Disclaimer</a> | <a href="#">Privacy Policy</a><br><br>
+  © 2026 THE PASHUPATINATH NEWS - INDIA EDITION. All Rights Reserved.
 </div>
-
-<script>
-// LIVE TIME
-function updateTime(){
-  document.getElementById('live-time').innerText = new Date().toLocaleString('hi-IN');
-}
-setInterval(updateTime, 1000);
-updateTime();
-</script>
 
 </body>
 </html>
