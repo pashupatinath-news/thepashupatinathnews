@@ -13,11 +13,16 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
 .navbar a{color:#fff; padding:10px 12px; text-decoration:none; font-size:13px; font-weight:bold;}
 .navbar a:hover{background:#333;}
 
-/* YE HI E-PAPER BUTTON HAI */
+/* E-PAPER BUTTON */
 .epaper-btn{background:#000; color:#FFD700; text-align:center; padding:12px; margin:8px 15px; font-weight:bold; font-size:14px; border-radius:3px; cursor:pointer; text-decoration:none; display:block; border:1px solid #FFD700;}
 .epaper-btn:hover{background:#222;}
 
-.ticker{background:#B00000; color:#fff; padding:8px; display:flex; justify-content:space-around; font-size:13px; font-weight:bold; overflow:hidden;}
+/* TICKER SLIDING */
+.ticker-wrap{background:#B00000; color:#fff; padding:8px; overflow:hidden; white-space:nowrap;}
+.ticker{ display:inline-block; padding-left:100%; animation:scroll 25s linear infinite;}
+@keyframes scroll{0%{transform:translate(0,0);}100%{transform:translate(-100%,0);}}
+.ticker span{margin:0 40px; font-size:13px; font-weight:bold;}
+
 .breaking{background:#fff; text-align:center; padding:8px; font-weight:bold; color:#B00000; font-size:14px;}
 .main-section{text-align:center; padding:15px; background:#fff; margin:10px;}
 .main-img{width:95%; max-width:900px; margin:10px auto; display:block; border-radius:6px;}
@@ -31,6 +36,15 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
 .news-card img{width:100%; height:160px; object-fit:cover; border-radius:4px; margin:8px 0;}
 .news-card p{font-size:13px; line-height:1.6; margin:4px 0;}
 
+/* NEW TIP SECTION */
+.tip-box{background:#fff; margin:20px 15px; padding:15px; border:2px dashed #B00000; border-radius:8px; text-align:center;}
+.tip-box h3{color:#B00000; margin-bottom:10px;}
+.tip-btns a{display:inline-block; margin:6px; padding:10px 16px; border-radius:25px; text-decoration:none; font-weight:bold; font-size:13px; color:#fff;}
+.tip-whatsapp{background:#25D366;}
+.tip-email{background:#D44638;}
+.tip-insta{background:linear-gradient(45deg,#f09433,#dc2743);}
+.tip-note{font-size:12px; color:#555; margin-top:10px;}
+
 .social-btns{text-align:center; margin:20px 0;}
 .social-btns a{display:inline-block; margin:5px; padding:8px 14px; border-radius:20px; text-decoration:none; font-size:13px; color:#fff; font-weight:bold;}
 .btn-insta{background:linear-gradient(45deg,#f09433,#dc2743);}
@@ -42,13 +56,12 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
 .address{background:#eee; text-align:center; padding:15px; font-size:13px; line-height:1.8;}
 .footer{background:#000; color:#fff; text-align:center; padding:15px; font-size:12px;}
 .footer a{color:#ccc; margin:0 10px; text-decoration:none;}
-.footer a:hover{color:#fff;}
 </style>
 </head>
 <body>
 
 <div class="top-bar">
-  <span>11 Jul 2026, 12:56:03 am | Bhan</span>
+  <span id="live-time">Loading...</span>
   <span>Chhattisgarh: 28°C</span>
 </div>
 
@@ -62,13 +75,16 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
   <a href="#">NAGPUR</a><a href="#">CRIME</a>
 </div>
 
-<!-- YAHI BUTTON HAI - ISSE EPAPER.HTML KHULEGA -->
+<!-- E-PAPER BUTTON - YE EPAPER.HTML KHOLEGA -->
 <a href="epaper.html" class="epaper-btn">THE PASHUPATINATH NEWS TRIBHASHA DAILY E-PAPER</a>
 
-<div class="ticker">
-  <span>Hindi: पशुपतिनाथ न्यूज का डिजिटल लॉन्च</span>
-  <span>English: Big News - Pashupatinath News launches new digital platform</span>
-  <span>Sanskrit: पशुपतिनाथ वार्ता डिजिटल मञ्चम्</span>
+<!-- SLIDING TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Hindi: पशुपतिनाथ न्यूज का डिजिटल लॉन्च</span>
+    <span>English: Big News - Pashupatinath News launches new digital platform</span>
+    <span>Sanskrit: पशुपतिनाथ वार्ता डिजिटल मञ्चम्</span>
+  </div>
 </div>
 
 <div class="breaking">🔥 Breaking Headline</div>
@@ -104,6 +120,18 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
   </div>
 </div>
 
+<!-- NEW TIP/NEWS SECTION -->
+<div class="tip-box">
+  <h3>📢 Kya Aapke Paas Koi News Hai?</h3>
+  <p>Apni samasya ya khabar ki photo + text hume bheje. Sidha mere paas aayega, public nahi hoga.</p>
+  <div class="tip-btns">
+    <a href="https://wa.me/919303100358?text=Namaste%20Sir,%20Mere%20paas%20ek%20khabar/problem%20hai:" target="_blank" class="tip-whatsapp">💬 WhatsApp</a>
+    <a href="mailto:aklove012016@gmail.com?subject=News Tip for Pashupatinath News" class="tip-email">📧 Email</a>
+    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="tip-insta">📷 Instagram DM</a>
+  </div>
+  <p class="tip-note">Note: Image bhejne ke liye WhatsApp/Email/IG app khul jayega. Waha attach karke bhej dena.</p>
+</div>
+
 <div class="social-btns">
   <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="btn-insta">📷 Instagram</a>
   <a href="https://wa.me/919303100358" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
@@ -123,6 +151,17 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1;}
   <a href="#">Disclaimer</a> | <a href="#">Privacy Policy</a><br><br>
   © 2026 THE PASHUPATINATH NEWS - INDIA EDITION. All Rights Reserved.
 </div>
+
+<script>
+// LIVE TIME
+function updateTime(){
+  const now = new Date();
+  const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute:'2-digit', second:'2-digit', hour12:true };
+  document.getElementById('live-time').innerText = now.toLocaleString('en-IN', options) + ' | Bhan';
+}
+setInterval(updateTime, 1000);
+updateTime();
+</script>
 
 </body>
 </html>
