@@ -4,63 +4,123 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE PASHUPATINATH NEWS - India Edition</title>
-<meta name="description" content="The Pashupatinath News - India Edition. Latest Hindi, English and Regional News from India">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="description" content="The Pashupatinath News - India Edition. Latest Hindi, English and Sanskrit News">
 <style>
-/* Yaha tera purana CSS wahi rahega - maine kuch nahi chheda */
 body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f5f5f5}
-.header{background:#fff;padding:10px;text-align:center;border-bottom:2px solid #d4af37}
-.header h1{color:#d4af37;margin:5px 0;font-size:24px}
-.header p{margin:0;font-size:12px;color:#555}
-.nav{background:#fff;padding:8px;display:flex;gap:15px;justify-content:center;border-bottom:1px solid #ddd}
-.nav a{text-decoration:none;color:#000;font-weight:bold;font-size:14px}
-.nav a.tpn{color:#ff0000}
-.breaking{background:#cc0000;color:#fff;padding:5px 10px;font-weight:bold;font-size:12px}
-.news-card{background:#fff;margin:10px;padding:10px;border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-.section-title{text-align:center;color:#cc0000;font-weight:bold;margin:15px 0}
-.weather,.video,.journalists,.contact{background:#fff;margin:10px;padding:10px;border-radius:5px}
+.topbar{background:#000;color:#fff;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap}
+.social a{color:#fff;margin:0 6px;font-size:16px;text-decoration:none}
+.social a:hover{color:#d4af37}
+.contact-num{color:#fff}
+.breaking{background:#cc0000;color:#fff;padding:5px 10px;font-size:12px;font-weight:bold}
+.top-row{display:flex;justify-content:space-between;padding:8px 10px;font-size:12px;background:#fff}
+.btn-epaper{background:red;color:#fff;border:none;padding:5px 12px;border-radius:3px;font-weight:bold}
+.header{text-align:center;padding:15px 10px;background:#fff}
+.header h1{color:#d4af37;margin:0;font-size:22px;font-weight:bold;letter-spacing:1px}
+.navbar{background:#fff;padding:10px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #ddd;flex-wrap:wrap}
+.search-box{padding:5px;border:1px solid #ccc;border-radius:3px;width:100px}
+.nav-links{display:flex;gap:10px;flex-wrap:wrap}
+.nav-links a{text-decoration:none;color:#000;font-weight:bold;font-size:13px}
+.nav-links a.active{color:red}
+.section-title{text-align:center;color:#cc0000;font-weight:bold;margin:15px 0;font-size:18px}
+.news-card{background:#fff;margin:10px;padding:10px;border-radius:5px;display:flex;gap:10px}
+.news-img{width:80px;height:60px;background:#ddd;border-radius:3px}
+.news-content{flex:1}
+.lang-hi{color:#000;font-weight:bold;font-size:14px}
+.lang-en{color:#555;font-size:12px}
+.lang-sk{color:#8B4513;font-size:12px}
+.dropdown{float:right;cursor:pointer}
+.weather,.video-box,.journalists,.contact{background:#fff;margin:10px;padding:10px;border-radius:5px}
+.video-placeholder{background:#000;color:#fff;text-align:center;padding:50px 0;border-radius:5px}
+.most-read{background:#fff;margin:10px;padding:10px;border-radius:5px}
+.jour-box{border-left:3px solid red;padding-left:10px;margin:10px 0}
+.jour-title{color:red;font-size:12px;font-weight:bold}
+.contact input,.contact textarea{width:100%;padding:8px;margin:5px 0;border:1px solid #ccc;border-radius:3px}
+.btn-send{background:#d4af37;border:none;padding:8px 20px;border-radius:3px;color:#000;font-weight:bold}
+@media(max-width:768px){.nav-links{overflow-x:auto}.topbar{justify-content:center;gap:10px}}
 </style>
+<script>
+function toggle(id){var x=document.getElementById(id);x.style.display=x.style.display=="block"?"none":"block"}
+</script>
 </head>
 <body>
 
+<!-- TOP BAR WITH YOUR SOCIAL + CONTACT -->
+<div class="topbar">
+  <div class="social">
+    <a href="https://www.instagram.com/aayush_vaishnav_1" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@newsman-view" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/919303100358" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919303100358"><i class="fas fa-phone"></i> +91-9303100358</a>
+  </div>
+  <div class="contact-num"><i class="fas fa-envelope"></i> aklove012016@gmail.com</div>
+</div>
+
 <div class="breaking">BREAKING</div>
 
-<div style="display:flex;justify-content:space-between;padding:5px 10px;font-size:12px">
-  <button style="background:red;color:#fff;border:none;padding:5px 10px;border-radius:3px">Read E-Paper</button>
+<div class="top-row">
+  <button class="btn-epaper">Read E-Paper</button>
   <span>10:32 am | 10 Jul 2026 | Bhilai</span>
 </div>
 
 <div class="header">
   <h1>THE PASHUPATINATH NEWS</h1>
-  <p>INDIA EDITION</p>
+  <p style="font-size:12px;margin:5px 0">INDIA EDITION</p>
 </div>
 
-<div class="nav">
-  <input type="text" placeholder="Search.." style="padding:3px">
-  <a href="#" class="tpn">TPN</a>
-  <a href="#">INDIA</a>
-  <a href="#">TECH</a>
-  <a href="#">CRICKET</a>
-  <a href="#">POLITICAL</a>
+<div class="navbar">
+  <input type="text" class="search-box" placeholder="Search...">
+  <div class="nav-links">
+    <a href="#" class="active">TPN</a>
+    <a href="#">INDIA</a>
+    <a href="#">TECH</a>
+    <a href="#">CRICKET</a>
+    <a href="#">POLITICAL</a>
+  </div>
 </div>
 
 <h2 class="section-title">LATEST NEWS</h2>
 
 <div class="news-card">
-  <b>हिंदी समाचार</b><br>
-  भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी<br>
-  <small>ENGLISH<br>Heavy rain in Bhilai since morning, warning for next 24 hours</small>
+  <div class="news-img"></div>
+  <div class="news-content">
+    <div class="lang-hi">हिंदी समाचार</div>
+    <div style="display:flex;justify-content:space-between">
+      <div class="lang-hi">भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी</div>
+      <div class="dropdown" onclick="toggle('n1')">▼</div>
+    </div>
+    <div class="lang-en">ENGLISH<br>Heavy rain in Bhilai since morning, warning for next 24 hours</div>
+    <div class="lang-sk">संस्कृत<br>भिलाईनगरे अद्य प्रभात् तीव्रा वृष्टिः, चतुर्विंशतिघण्टा चेतावनी</div>
+    <div id="n1" style="display:none;padding-top:5px">Puri khabar yaha aayegi...</div>
+  </div>
 </div>
 
 <div class="news-card">
-  <b>हिंदी</b><br>
-  भिलाई स्टील प्लांट में 500 पदों पर भर्ती शुरू<br>
-  <small>ENGLISH<br>Bhilai Steel Plant recruitment open for 500 posts</small>
+  <div class="news-img"></div>
+  <div class="news-content">
+    <div class="lang-hi">हिंदी</div>
+    <div style="display:flex;justify-content:space-between">
+      <div class="lang-hi">भिलाई स्टील प्लांट में 500 पदों पर भर्ती शुरू</div>
+      <div class="dropdown" onclick="toggle('n2')">▼</div>
+    </div>
+    <div class="lang-en">ENGLISH<br>Bhilai Steel Plant recruitment open for 500 posts</div>
+    <div class="lang-sk">संस्कृत<br>भिलाई लौह संयंत्रे पञ्चशत पदेषु नियुक्तिः आरब्धा</div>
+    <div id="n2" style="display:none;padding-top:5px">Puri khabar yaha aayegi...</div>
+  </div>
 </div>
 
 <div class="news-card">
-  <b>हिंदी</b><br>
-  छत्तीसगढ़ में 15 अक्टूबर से शीतकालीन छुट्टियां<br>
-  <small>ENGLISH<br>Winter holidays in Chhattisgarh schools from 15 Oct</small>
+  <div class="news-img"></div>
+  <div class="news-content">
+    <div class="lang-hi">हिंदी</div>
+    <div style="display:flex;justify-content:space-between">
+      <div class="lang-hi">छत्तीसगढ़ में 15 अक्टूबर से शीतकालीन छुट्टियां</div>
+      <div class="dropdown" onclick="toggle('n3')">▼</div>
+    </div>
+    <div class="lang-en">ENGLISH<br>Winter holidays in Chhattisgarh schools from 15 Oct</div>
+    <div class="lang-sk">संस्कृत<br>छत्तीसगढ़ राज्यस्य विद्यालयेषु शीतकालीन अवकाशः</div>
+    <div id="n3" style="display:none;padding-top:5px">Puri khabar yaha aayegi...</div>
+  </div>
 </div>
 
 <div class="weather">
@@ -68,15 +128,16 @@ body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f5f5f5}
   Loading...
 </div>
 
-<div style="display:flex;gap:10px">
-  <div class="video" style="flex:2">
-    <b>Latest Video - NEWSMAN'S VIEW</b><br>
-    <div style="background:#000;color:#fff;text-align:center;padding:40px 0;border-radius:5px">
-      ⚠️ This video is unavailable
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+  <div class="video-box" style="flex:2;min-width:300px">
+    <b>Latest Video - NEWSMAN'S VIEW</b>
+    <div class="video-placeholder">
+      <div style="font-size:30px">!</div>
+      This video is unavailable
     </div>
   </div>
-  <div class="weather" style="flex:1">
-    <b>Most Read</b><br>
+  <div class="most-read" style="flex:1;min-width:200px">
+    <b>Most Read</b><br><br>
     1. Top News 1<br>
     2. Top News 2<br>
     3. Top News 3<br>
@@ -86,23 +147,23 @@ body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f5f5f5}
 </div>
 
 <h2 class="section-title">OUR JOURNALISTS</h2>
-<div class="journalists" style="display:flex;gap:10px">
-  <div style="flex:1;border-left:3px solid red;padding-left:10px">
-    <b style="color:red">CHIEF IN EDITOR - OWNER</b><br>
-    AAYUSH VAISHNAV
+<div class="journalists" style="display:flex;gap:10px;flex-wrap:wrap">
+  <div class="jour-box" style="flex:1">
+    <div class="jour-title">CHIEF IN EDITOR - OWNER</div>
+    <div><b>AAYUSH VAISHNAV</b></div>
   </div>
-  <div style="flex:1;border-left:3px solid red;padding-left:10px">
-    <b style="color:red">CO NEWS EDITOR</b><br>
-    PRASHANT VERMA
+  <div class="jour-box" style="flex:1">
+    <div class="jour-title">CO NEWS EDITOR</div>
+    <div><b>PRASHANT VERMA</b></div>
   </div>
 </div>
 
 <div class="contact">
   <b>Contact Us</b><br><br>
-  <input type="text" placeholder="Your Name" style="width:100%;padding:8px;margin:5px 0"><br>
-  <input type="email" placeholder="Your Email" style="width:100%;padding:8px;margin:5px 0"><br>
-  <textarea placeholder="Your Message" style="width:100%;padding:8px;margin:5px 0;height:80px"></textarea><br>
-  <button style="background:#d4af37;border:none;padding:8px 20px;border-radius:3px">Send Message</button>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Your Message" rows="4"></textarea>
+  <button class="btn-send">Send Message</button>
 </div>
 
 </body>
