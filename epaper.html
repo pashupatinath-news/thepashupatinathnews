@@ -4,23 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE PASHUPATINATH NEWS DAILY E - PAPER</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0; background:#e8e8e8; font-family:'Noto Serif', 'Times New Roman', serif;}
+body{margin:0; background:#e8e8e8; font-family:'Noto Serif', serif;}
 .header{position:sticky; top:0; background:#fff; text-align:center; padding:15px; border-bottom:4px solid #8B0000;}
-.header h1{margin:0; font-size:34px; color:#8B0000; letter-spacing:2px;}
+.header h1{margin:0; font-size:32px; color:#8B0000; letter-spacing:2px; font-weight:700;}
 .header p{margin:5px 0 0; font-size:14px; color:#333; font-weight:bold;}
 .container{max-width:1200px; margin:20px auto; background:#fff; padding:25px; box-shadow:0 0 20px rgba(0,0,0,0.15);}
 .news-grid{display:grid; grid-template-columns: 1fr 1fr 1fr; gap:20px; margin-top:20px;}
-.news-card{border:1px solid #ccc; padding:15px; background:#fefefe;}
-.news-card img{width:100%; height:180px; object-fit:cover; border-bottom:2px solid #8B0000; margin-bottom:10px;}
-.news-card h3{color:#8B0000; font-size:18px; margin:0 0 10px; border-bottom:1px solid #ddd; padding-bottom:5px;}
+.news-card{border:1px solid #ddd; padding:15px; background:#fefefe; border-radius:4px;}
+.news-card img{width:100%; height:200px; object-fit:cover; border-bottom:3px solid #8B0000; margin-bottom:10px;}
+.news-card h3{color:#8B0000; font-size:18px; margin:0 0 10px; border-bottom:1px solid #eee; padding-bottom:5px;}
 .news-card p{font-size:14px; line-height:1.6; margin:8px 0;}
 .lang-hi{color:#000; font-weight:bold;}
 .lang-en{color:#0047AB;}
 .lang-sa{color:#8B4513; font-style:italic;}
 .back-btn{display:block; width:240px; margin:30px auto; padding:14px; background:#8B0000; color:#fff; text-align:center; text-decoration:none; font-weight:bold; border-radius:6px; font-size:16px;}
 .back-btn:hover{background:#A00000;}
-@media(max-width:900px){.news-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){.news-grid{grid-template-columns:1fr;} .header h1{font-size:22px;}}
 </style>
 </head>
 <body>
@@ -36,7 +37,7 @@ body{margin:0; background:#e8e8e8; font-family:'Noto Serif', 'Times New Roman', 
     
     <!-- NEWS 1 -->
     <div class="news-card">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=500" alt="News1">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=600" alt="News1">
       <h3>मुख्य समाचार 1</h3>
       <p class="lang-hi">Hindi: छत्तीसगढ़ में नई सड़क योजना शुरू, 500 गांव जुड़ेंगे</p>
       <p class="lang-en">English: New road scheme launched in Chhattisgarh, 500 villages to connect</p>
@@ -45,7 +46,7 @@ body{margin:0; background:#e8e8e8; font-family:'Noto Serif', 'Times New Roman', 
     
     <!-- NEWS 2 -->
     <div class="news-card">
-      <img src="https://images.unsplash.com/photo-1529107386315-e1a2e69a247a?w=500" alt="News2">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2e69a247a?w=600" alt="News2">
       <h3>मुख्य समाचार 2</h3>
       <p class="lang-hi">Hindi: भारत ने आज क्रिकेट मैच में बड़ी जीत हासिल की</p>
       <p class="lang-en">English: India won today's cricket match with big margin</p>
@@ -54,7 +55,7 @@ body{margin:0; background:#e8e8e8; font-family:'Noto Serif', 'Times New Roman', 
     
     <!-- NEWS 3 -->
     <div class="news-card">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500" alt="News3">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="News3">
       <h3>मुख्य समाचार 3</h3>
       <p class="lang-hi">Hindi: पाटन में नया स्वास्थ्य केंद्र खुला, मुफ्त इलाज मिलेगा</p>
       <p class="lang-en">English: New health center opened in Patan, free treatment available</p>
