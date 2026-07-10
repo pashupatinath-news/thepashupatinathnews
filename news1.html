@@ -3,22 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>कुकुरी में भारी बारिश</title>
+<title>भिलाई में तेज बारिश - THE PASHUPATINATH NEWS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-body{font-family:Arial; background:#f4f4f4; margin:0; padding:20px;}
-.container{max-width:800px; margin:auto; background:white; padding:20px; border-radius:10px;}
-img{width:100%; border-radius:10px;}
-h1{color:#000;}
-.back{display:inline-block; margin-top:20px; padding:10px 20px; background:black; color:white; text-decoration:none; border-radius:5px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5}
+.topbar{background:#000;color:#fff;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap}
+.social a{color:#fff;margin:0 6px;font-size:16px;text-decoration:none}
+.breaking{background:#cc0000;color:#fff;padding:5px 10px;display:flex;align-items:center;gap:10px}
+.breaking-label{background:#000;padding:3px 8px;font-weight:bold;font-size:12px}
+.ticker{overflow:hidden;white-space:nowrap;flex:1;font-size:12px}
+.ticker span{display:inline-block;padding-left:100%;animation:slide 20s linear infinite}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.top-row{display:flex;justify-content:space-between;padding:8px 10px;font-size:12px;background:#fff;align-items:center}
+.btn-back{background:red;color:#fff;border:none;padding:6px 12px;border-radius:3px;font-weight:bold;text-decoration:none}
+.header{text-align:center;padding:15px 10px;background:#fff}
+.header h1{color:#d4af37;margin:0;font-size:22px;font-weight:bold;letter-spacing:1px}
+.container{max-width:900px;margin:15px auto;background:#fff;padding:20px;border-radius:5px}
+.headline-hi{font-size:24px;font-weight:bold;color:#000;margin:10px 0;line-height:1.4}
+.headline-en{font-size:17px;color:#444;margin:5px 0}
+.headline-sk{font-size:16px;color:#8B4513;margin:5px 0}
+.news-img{width:100%;height:300px;background:#ddd url('https://via.placeholder.com/800x300') center/cover;border-radius:5px;margin:15px 0}
+.section{margin:20px 0}
+.section-title{font-size:18px;font-weight:bold;color:#cc0000;border-bottom:2px solid #cc0000;padding-bottom:5px;margin-bottom:10px}
+p{font-size:15px;line-height:1.7;color:#333}
 </style>
 </head>
 <body>
-<div class="container">
-<h1>कुकुरी में भारी बारिश से जनजीवन प्रभावित, प्रशासन अलर्ट पर</h1>
-<img src="https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?w=800" alt="Rain">
-<p><b>Kunkuri, Chhattisgarh</b> - पिछले 24 घंटों से कुकुरी क्षेत्र में लगातार भारी बारिश हो रही है। जिसके कारण निचले इलाकों में पानी भर गया है।</p>
-<p>मौसम विभाग ने अगले 48 घंटों के लिए ऑरेंज अलर्ट जारी किया है। प्रशासन ने लोगों से नदियों से दूर रहने की अपील की है।</p>
-<a href="index.html" class="back">← वापस जाएं</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="social">
+    <a href="https://www.instagram.com/aayush_vaishnav_1" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@newsman-view" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/919303100358" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919303100358"><i class="fas fa-phone"></i> +91-9303100358</a>
+  </div>
+  <div><i class="fas fa-envelope"></i> aklove012016@gmail.com</div>
 </div>
+
+<!-- BREAKING -->
+<div class="breaking">
+  <div class="breaking-label">BREAKING</div>
+  <div class="ticker">
+    <span>भिलाई में तेज बारिश की चेतावनी | Heavy Rain Alert in Bhilai | भिलाईनगरे तीव्रा वृष्टि चेतावनी ||</span>
+  </div>
+</div>
+
+<!-- TOP ROW -->
+<div class="top-row">
+  <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <span>10:32 am | 10 Jul 2026 | Bhilai</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>THE PASHUPATINATH NEWS</h1>
+  <p style="font-size:12px;margin:5px 0">INDIA EDITION</p>
+</div>
+
+<!-- NEWS DETAIL -->
+<div class="container">
+  <!-- 1. HEADLINE 3 LANGUAGE -->
+  <div class="headline-hi">भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी</div>
+  <div class="headline-en">Heavy rain in Bhilai since morning, warning for next 24 hours</div>
+  <div class="headline-sk">भिलाईनगरे अद्य प्रभात् तीव्रा वृष्टिः, चतुर्विंशतिघण्टा चेतावनी</div>
+
+  <!-- 2. IMAGE -->
+  <div class="news-img"></div>
+
+  <!-- 3. HINDI NEWS -->
+  <div class="section">
+    <div class="section-title">हिंदी में पूरी खबर</div>
+    <p>भिलाई में आज सुबह से लगातार तेज बारिश हो रही है। मौसम विभाग ने अगले 24 घंटे के लिए भारी बारिश की चेतावनी जारी की है। निचले इलाकों में पानी भरने की संभावना है। प्रशासन ने लोगों से घरों में रहने की अपील की है। भिलाई स्टील प्लांट क्षेत्र में जलभराव की खबरें आ रही हैं।</p>
+  </div>
+
+  <!-- 4. ENGLISH NEWS -->
+  <div class="section">
+    <div class="section-title">Full News in English</div>
+    <p>Heavy rain has been lashing Bhilai since this morning. The weather department has issued a warning for heavy rainfall for the next 24 hours. Waterlogging is likely in low-lying areas. The administration has appealed to people to stay indoors. Reports of waterlogging are coming from the Bhilai Steel Plant area.</p>
+  </div>
+
+  <!-- 5. SANSKRIT NEWS -->
+  <div class="section">
+    <div class="section-title">सम्पूर्ण समाचार संस्कृते</div>
+    <p>अद्य भिलाईनगरे प्रभात् आरभ्य निरन्तरं तीव्रा वृष्टिः भवति। मौसम विभागेन आगामिनां चतुर्विंशतिघण्टानां कृते तीव्रवृष्टेः चेतावनी दत्ता। निम्नप्रदेशेषु जलसञ्चयः सम्भवति। प्रशासनं जनान् गृहेषु स्थातुं प्रार्थयति। भिलाई लौह संयंत्र क्षेत्रे जलप्लावनस्य वार्ता आगच्छति।</p>
+  </div>
+</div>
+
 </body>
 </html>
