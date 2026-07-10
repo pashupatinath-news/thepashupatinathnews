@@ -6,50 +6,44 @@
 <title>THE PASHUPATINATH NEWS - India Edition</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f5f5f5}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5}
 .topbar{background:#000;color:#fff;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap}
 .social a{color:#fff;margin:0 6px;font-size:16px;text-decoration:none}
-.social a:hover{color:#d4af37}
-.contact-num{color:#fff}
 .breaking{background:#cc0000;color:#fff;padding:5px 10px;display:flex;align-items:center;gap:10px}
 .breaking-label{background:#000;padding:3px 8px;font-weight:bold;font-size:12px}
 .ticker{overflow:hidden;white-space:nowrap;flex:1;font-size:12px}
 .ticker span{display:inline-block;padding-left:100%;animation:slide 20s linear infinite}
 @keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.top-row{display:flex;justify-content:space-between;padding:8px 10px;font-size:12px;background:#fff}
-.btn-epaper{background:red;color:#fff;border:none;padding:5px 12px;border-radius:3px;font-weight:bold}
+.top-row{display:flex;justify-content:space-between;padding:8px 10px;font-size:12px;background:#fff;align-items:center}
+.btn-epaper{background:red;color:#fff;border:none;padding:6px 12px;border-radius:3px;font-weight:bold}
 .header{text-align:center;padding:15px 10px;background:#fff}
 .header h1{color:#d4af37;margin:0;font-size:22px;font-weight:bold;letter-spacing:1px}
-.navbar{background:#fff;padding:10px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #ddd;flex-wrap:wrap}
+.navbar{background:#fff;padding:10px;display:flex;gap:10px;border-bottom:1px solid #ddd;overflow-x:auto}
 .search-box{padding:5px;border:1px solid #ccc;border-radius:3px;width:100px}
-.nav-links{display:flex;gap:10px;flex-wrap:wrap}
-.nav-links a{text-decoration:none;color:#000;font-weight:bold;font-size:13px}
-.nav-links a.active{color:red}
+.navbar a{text-decoration:none;color:#000;font-weight:bold;font-size:13px;white-space:nowrap}
+.navbar a.active{color:red}
 .section-title{text-align:center;color:#cc0000;font-weight:bold;margin:15px 0;font-size:18px}
-.news-card{background:#fff;margin:10px;padding:10px;border-radius:5px;display:flex;gap:10px}
-.news-img{width:80px;height:60px;background:#ddd;border-radius:3px}
+.news-card{background:#fff;margin:10px;padding:10px;border-radius:5px;display:flex;gap:10px;text-decoration:none;color:#000;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.news-img{width:90px;height:70px;background:#ddd;border-radius:3px;flex-shrink:0}
 .news-content{flex:1}
-.lang-hi{color:#000;font-weight:bold;font-size:14px}
-.lang-en{color:#555;font-size:12px}
-.lang-sk{color:#8B4513;font-size:12px}
-.dropdown{cursor:pointer}
-.news-detail{display:none;padding-top:5px}
-.weather,.video-box,.journalists,.contact{background:#fff;margin:10px;padding:10px;border-radius:5px}
+.lang-label{font-size:11px;font-weight:bold;margin-top:4px}
+.hi{color:#000;font-size:15px;font-weight:bold}
+.en{color:#444;font-size:13px}
+.sk{color:#8B4513;font-size:13px}
+.weather,.video-box,.journalists,.contact,.most-read{background:#fff;margin:10px;padding:10px;border-radius:5px}
 .video-placeholder{background:#000;color:#fff;text-align:center;padding:50px 0;border-radius:5px}
-.most-read{background:#fff;margin:10px;padding:10px;border-radius:5px}
+.flex-box{display:flex;gap:10px;flex-wrap:wrap}
+.flex-box > div{flex:1;min-width:300px}
 .jour-box{border-left:3px solid red;padding-left:10px;margin:10px 0}
 .jour-title{color:red;font-size:12px;font-weight:bold}
 .contact input,.contact textarea{width:100%;padding:8px;margin:5px 0;border:1px solid #ccc;border-radius:3px}
 .btn-send{background:#d4af37;border:none;padding:8px 20px;border-radius:3px;color:#000;font-weight:bold}
-@media(max-width:768px){.nav-links{overflow-x:auto}.topbar{justify-content:center;gap:10px}}
 </style>
-<script>
-function toggle(id){var x=document.getElementById(id);x.style.display=x.style.display=="block"?"none":"block"}
-</script>
 </head>
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="social">
     <a href="https://www.instagram.com/aayush_vaishnav_1" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -57,102 +51,96 @@ function toggle(id){var x=document.getElementById(id);x.style.display=x.style.di
     <a href="https://wa.me/919303100358" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="tel:+919303100358"><i class="fas fa-phone"></i> +91-9303100358</a>
   </div>
-  <div class="contact-num"><i class="fas fa-envelope"></i> aklove012016@gmail.com</div>
+  <div><i class="fas fa-envelope"></i> aklove012016@gmail.com</div>
 </div>
 
-<!-- BREAKING WITH SLIDING TICKER 3 LANGUAGE -->
+<!-- BREAKING -->
 <div class="breaking">
   <div class="breaking-label">BREAKING</div>
   <div class="ticker">
-    <span>
-      भिलाई में तेज बारिश की चेतावनी | Heavy Rain Alert in Bhilai | भिलाईनगरे तीव्रा वृष्टि चेतावनी 
-      || भिलाई स्टील प्लांट भर्ती शुरू | Bhilai Steel Plant Recruitment Open | भिलाई लौह संयंत्रे नियुक्तिः आरब्धा ||
-    </span>
+    <span>भिलाई में तेज बारिश की चेतावनी | Heavy Rain Alert in Bhilai | भिलाईनगरे तीव्रा वृष्टि चेतावनी ||</span>
   </div>
 </div>
 
+<!-- TOP ROW -->
 <div class="top-row">
   <button class="btn-epaper">Read E-Paper</button>
   <span>10:32 am | 10 Jul 2026 | Bhilai</span>
 </div>
 
+<!-- HEADER -->
 <div class="header">
   <h1>THE PASHUPATINATH NEWS</h1>
   <p style="font-size:12px;margin:5px 0">INDIA EDITION</p>
 </div>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <input type="text" class="search-box" placeholder="Search...">
-  <div class="nav-links">
-    <a href="#" class="active">TPN</a>
-    <a href="#">INDIA</a>
-    <a href="#">TECH</a>
-    <a href="#">CRICKET</a>
-    <a href="#">POLITICAL</a>
-  </div>
+  <a href="#" class="active">TPN</a>
+  <a href="#">INDIA</a>
+  <a href="#">TECH</a>
+  <a href="#">CRICKET</a>
+  <a href="#">POLITICAL</a>
 </div>
 
 <h2 class="section-title">LATEST NEWS</h2>
 
-<!-- NEWS 1 - NOW CLICKABLE -->
-<div class="news-card">
+<!-- NEWS 1 -->
+<a href="news1.html" class="news-card">
   <div class="news-img"></div>
-  <div class="news-content" onclick="toggle('n1')">
-    <div class="lang-hi">हिंदी समाचार</div>
-    <div style="display:flex;justify-content:space-between">
-      <div class="lang-hi">भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी</div>
-      <div class="dropdown">▼</div>
-    </div>
-    <div class="lang-en">ENGLISH<br>Heavy rain in Bhilai since morning, warning for next 24 hours</div>
-    <div class="lang-sk">संस्कृत<br>भिलाईनगरे अद्य प्रभात् तीव्रा वृष्टिः, चतुर्विंशतिघण्टा चेतावनी</div>
-    <div id="n1" class="news-detail">Puri khabar: Bhilai me IMD ne agle 24 ghante me bhari barish ki chetawani jari ki hai. Neechi jagahon par pani bhar sakta hai.</div>
+  <div class="news-content">
+    <div class="lang-label">हिंदी समाचार</div>
+    <div class="hi">भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी</div>
+    <div class="lang-label">ENGLISH</div>
+    <div class="en">Heavy rain in Bhilai since morning, warning for next 24 hours</div>
+    <div class="lang-label">संस्कृत</div>
+    <div class="sk">भिलाईनगरे अद्य प्रभात् तीव्रा वृष्टिः, चतुर्विंशतिघण्टा चेतावनी</div>
   </div>
-</div>
+</a>
 
 <!-- NEWS 2 -->
-<div class="news-card">
+<a href="news2.html" class="news-card">
   <div class="news-img"></div>
-  <div class="news-content" onclick="toggle('n2')">
-    <div class="lang-hi">हिंदी</div>
-    <div style="display:flex;justify-content:space-between">
-      <div class="lang-hi">भिलाई स्टील प्लांट में 500 पदों पर भर्ती शुरू</div>
-      <div class="dropdown">▼</div>
-    </div>
-    <div class="lang-en">ENGLISH<br>Bhilai Steel Plant recruitment open for 500 posts</div>
-    <div class="lang-sk">संस्कृत<br>भिलाई लौह संयंत्रे पञ्चशत पदेषु नियुक्तिः आरब्धा</div>
-    <div id="n2" class="news-detail">Puri khabar: BSP me Technician, Operator ke 500 padon par bharti shuru. Last date 30 July 2026.</div>
+  <div class="news-content">
+    <div class="lang-label">हिंदी</div>
+    <div class="hi">भिलाई स्टील प्लांट में 500 पदों पर भर्ती शुरू</div>
+    <div class="lang-label">ENGLISH</div>
+    <div class="en">Bhilai Steel Plant recruitment open for 500 posts</div>
+    <div class="lang-label">संस्कृत</div>
+    <div class="sk">भिलाई लौह संयंत्रे पञ्चशत पदेषु नियुक्तिः आरब्धा</div>
   </div>
-</div>
+</a>
 
 <!-- NEWS 3 -->
-<div class="news-card">
+<a href="news3.html" class="news-card">
   <div class="news-img"></div>
-  <div class="news-content" onclick="toggle('n3')">
-    <div class="lang-hi">हिंदी</div>
-    <div style="display:flex;justify-content:space-between">
-      <div class="lang-hi">छत्तीसगढ़ में 15 अक्टूबर से शीतकालीन छुट्टियां</div>
-      <div class="dropdown">▼</div>
-    </div>
-    <div class="lang-en">ENGLISH<br>Winter holidays in Chhattisgarh schools from 15 Oct</div>
-    <div class="lang-sk">संस्कृत<br>छत्तीसगढ़ राज्यस्य विद्यालयेषु शीतकालीन अवकाशः</div>
-    <div id="n3" class="news-detail">Puri khabar: Shiksha vibhag ne ghoshna ki 15 Oct se 15 Jan tak winter vacation rahegi.</div>
+  <div class="news-content">
+    <div class="lang-label">हिंदी</div>
+    <div class="hi">छत्तीसगढ़ में 15 अक्टूबर से शीतकालीन छुट्टियां</div>
+    <div class="lang-label">ENGLISH</div>
+    <div class="en">Winter holidays in Chhattisgarh schools from 15 Oct</div>
+    <div class="lang-label">संस्कृत</div>
+    <div class="sk">छत्तीसगढ़ राज्यस्य विद्यालयेषु शीतकालीन अवकाशः</div>
   </div>
-</div>
+</a>
 
+<!-- WEATHER -->
 <div class="weather">
   <b>Live Weather - Bhilai</b><br>
   Loading...
 </div>
 
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-  <div class="video-box" style="flex:2;min-width:300px">
+<!-- VIDEO + MOST READ -->
+<div class="flex-box">
+  <div class="video-box">
     <b>Latest Video - NEWSMAN'S VIEW</b>
     <div class="video-placeholder">
       <div style="font-size:30px">!</div>
       This video is unavailable
     </div>
   </div>
-  <div class="most-read" style="flex:1;min-width:200px">
+  <div class="most-read">
     <b>Most Read</b><br><br>
     1. Top News 1<br>
     2. Top News 2<br>
@@ -162,18 +150,20 @@ function toggle(id){var x=document.getElementById(id);x.style.display=x.style.di
   </div>
 </div>
 
+<!-- JOURNALISTS -->
 <h2 class="section-title">OUR JOURNALISTS</h2>
-<div class="journalists" style="display:flex;gap:10px;flex-wrap:wrap">
-  <div class="jour-box" style="flex:1">
+<div class="journalists flex-box">
+  <div class="jour-box">
     <div class="jour-title">CHIEF IN EDITOR - OWNER</div>
     <div><b>AAYUSH VAISHNAV</b></div>
   </div>
-  <div class="jour-box" style="flex:1">
+  <div class="jour-box">
     <div class="jour-title">CO NEWS EDITOR</div>
     <div><b>PRASHANT VERMA</b></div>
   </div>
 </div>
 
+<!-- CONTACT -->
 <div class="contact">
   <b>Contact Us</b><br><br>
   <input type="text" placeholder="Your Name">
