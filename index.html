@@ -8,12 +8,10 @@
   *{margin:0; padding:0; box-sizing:border-box;}
   body { font-family: Arial, sans-serif; background:#fff; color:#333; }
   
-  /* HEADER */
   header { background:#fff; padding:8px 15px; text-align:center; position:sticky; top:0; z-index:999; border-bottom:2px solid #D4AF37; }
   .header-top { display:flex; justify-content:space-between; align-items:center; font-size:11px; color:#000; margin-bottom:5px; }
   header h1 { font-size:18px; font-weight:800; color:#D4AF37; letter-spacing:1px; padding:5px 0; }
 
-  /* CATEGORIES SLIDER */
   .cat-slider { background:#000; padding:6px 5px; overflow-x:auto; white-space:nowrap; position:sticky; top:62px; z-index:998; }
   .cat-slider::-webkit-scrollbar{display:none;}
   .cat-slider a { display:inline-block; color:#fff; padding:6px 12px; margin:0 3px; text-decoration:none; font-weight:bold; font-size:12px; border-radius:20px; background:#222; transition:0.3s; }
@@ -21,18 +19,15 @@
 
   .container { max-width:1200px; margin:auto; padding:10px; }
 
-  /* E-PAPER BLACK BUTTON */
   .epaper-btn { text-align:center; margin:10px 0; }
   .epaper-btn a { display:inline-block; padding:8px 15px; background:#000; color:#D4AF37; text-decoration:none; border-radius:8px; font-weight:800; font-size:13px; }
 
-  /* RED BREAKING TICKER */
   .breaking-ticker { background:#b30000; color:#fff; padding:8px 0; overflow:hidden; position:relative; margin:8px 0; }
   .ticker-wrap { display:flex; width:200%; animation: slide 18s linear infinite; }
   .ticker-item { width:100%; display:flex; gap:30px; padding:0 15px; align-items:center; font-weight:bold; font-size:12px; }
   .ticker-lang { min-width:280px; }
   @keyframes slide { 0% {transform: translateX(0);} 100% {transform: translateX(-50%);} }
 
-  /* BREAKING CARD */
   .breaking-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1); padding: 15px; margin: 15px 0; text-align: center; border:1px solid #eee; }
   .breaking-card h2 { color: #D4AF37; font-size: 16px; margin-bottom: 10px; font-weight: 700; }
   .breaking-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
@@ -41,7 +36,6 @@
 
   .section-title { color:#D4AF37; text-align:center; margin:15px 0 10px; font-size:20px; border-bottom:2px solid #D4AF37; padding-bottom:5px; }
 
-  /* LATEST NEWS WITH IMAGE */
   .news-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin:15px 0; }
   .news-box { background:#fff; border-radius:12px; box-shadow:0 3px 12px rgba(0,0,0,0.08); padding:0; text-decoration:none; color:inherit; display:block; transition:0.3s; overflow:hidden; border:1px solid #eee; }
   .news-box:hover { transform:translateY(-3px); }
@@ -56,7 +50,9 @@
 
   .address { background:#f5f5f5; padding:12px; border-radius:10px; text-align:center; margin:15px 0; font-size:12px; line-height:1.6; }
 
-  footer { background:#000; color:#fff; text-align:center; padding:12px; margin-top:15px; font-size:12px; }
+  footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:15px; font-size:12px; }
+  footer a { color:#D4AF37; text-decoration:none; margin:0 8px; font-weight:bold; }
+  footer a:hover { text-decoration:underline; }
   @media(max-width:768px){ .breaking-card img{height:180px;} header h1{font-size:16px;} .news-img{height:150px;} }
 </style>
 </head>
@@ -85,12 +81,10 @@
 
 <div class="container">
 
-<!-- E-PAPER BLACK BUTTON -->
 <div class="epaper-btn">
   <a href="epaper.html" target="_blank">THE PASHUPATINATH NEWS TRIBHASHA DAILY E-PAPER</a>
 </div>
 
-<!-- RED BREAKING TICKER 3 LANGUAGE -->
 <div class="breaking-ticker">
   <div class="ticker-wrap">
     <div class="ticker-item">
@@ -106,7 +100,6 @@
   </div>
 </div>
 
-<!-- BREAKING CARD -->
 <div class="breaking-card">
   <h2>🔥 Breaking Headline</h2>
   <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Breaking">
@@ -117,7 +110,6 @@
 <h2 class="section-title">Latest News</h2>
 <div class="news-list">
 
-  <!-- NEWS 1 -->
   <a href="news1.html" class="news-box">
     <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716f73d?w=600" class="news-img" alt="News1">
     <div class="news-content">
@@ -128,7 +120,6 @@
     </div>
   </a>
 
-  <!-- NEWS 2 -->
   <a href="news2.html" class="news-box">
     <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600" class="news-img" alt="News2">
     <div class="news-content">
@@ -139,7 +130,6 @@
     </div>
   </a>
 
-  <!-- NEWS 3 -->
   <a href="news3.html" class="news-box">
     <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" class="news-img" alt="News3">
     <div class="news-content">
@@ -152,7 +142,6 @@
 
 </div>
 
-<!-- TERE ORIGINAL BUTTONS -->
 <div class="social-bar">
   <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="social-btn">📷 Instagram</a>
   <a href="https://wa.me/919303100358" target="_blank" class="social-btn">💬 WhatsApp</a>
@@ -161,7 +150,6 @@
   <a href="tel:9303100358" class="social-btn">📞 Call: 9303100358</a>
 </div>
 
-<!-- TERA ORIGINAL ADDRESS -->
 <div class="address">
   <b>Address:</b><br>
   VILLAGE - KASHI, POST - GUJRA, BLOCK - PATAN<br>
@@ -171,7 +159,9 @@
 
 </div>
 
+<!-- YE FOOTER ME AB LINK ADD HAI -->
 <footer>
+  <p><a href="disclaimer.html">Disclaimer</a> | <a href="privacy.html">Privacy Policy</a></p>
   <p>© 2025 THE PASHUPATINATH NEWS - INDIA EDITION. All Rights Reserved.</p>
 </footer>
 
@@ -181,11 +171,6 @@ function updateTime(){
   document.getElementById("live-time").innerText = now.toLocaleString('en-IN', {day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'}) + " | Bhilai";
 }
 setInterval(updateTime, 1000); updateTime();
-
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Raipur,in&units=metric&appid=demo')
-.then(res => res.json()).then(data => {
-  if(data.main) document.getElementById("weather").innerText = `Chhattisgarh: ${Math.round(data.main.temp)}°C`;
-});
 </script>
 
 </body>
