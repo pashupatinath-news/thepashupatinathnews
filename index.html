@@ -3,174 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS - India Edition</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>THE PASHUPATINATH NEWS - INDIA EDITION</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f5f5f5}
-.topbar{background:#000;color:#fff;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap}
-.social a{color:#fff;margin:0 6px;font-size:16px;text-decoration:none}
-.breaking{background:#cc0000;color:#fff;padding:5px 10px;display:flex;align-items:center;gap:10px}
-.breaking-label{background:#000;padding:3px 8px;font-weight:bold;font-size:12px}
-.ticker{overflow:hidden;white-space:nowrap;flex:1;font-size:12px}
-.ticker span{display:inline-block;padding-left:100%;animation:slide 20s linear infinite}
-@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.top-row{display:flex;justify-content:space-between;padding:8px 10px;font-size:12px;background:#fff;align-items:center}
-.btn-epaper{background:red;color:#fff;border:none;padding:6px 12px;border-radius:3px;font-weight:bold}
-.header{text-align:center;padding:15px 10px;background:#fff}
-.header h1{color:#d4af37;margin:0;font-size:22px;font-weight:bold;letter-spacing:1px}
-.navbar{background:#fff;padding:10px;display:flex;gap:10px;border-bottom:1px solid #ddd;overflow-x:auto}
-.search-box{padding:5px;border:1px solid #ccc;border-radius:3px;width:100px}
-.navbar a{text-decoration:none;color:#000;font-weight:bold;font-size:13px;white-space:nowrap}
-.navbar a.active{color:red}
-.section-title{text-align:center;color:#cc0000;font-weight:bold;margin:15px 0;font-size:18px}
-.news-card{background:#fff;margin:10px;padding:10px;border-radius:5px;display:flex;gap:10px;text-decoration:none;color:#000;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-.news-img{width:90px;height:70px;background:#ddd;border-radius:3px;flex-shrink:0}
-.news-content{flex:1}
-.lang-label{font-size:11px;font-weight:bold;margin-top:4px}
-.hi{color:#000;font-size:15px;font-weight:bold}
-.en{color:#444;font-size:13px}
-.sk{color:#8B4513;font-size:13px}
-.weather,.video-box,.journalists,.contact,.most-read{background:#fff;margin:10px;padding:10px;border-radius:5px}
-.video-placeholder{background:#000;color:#fff;text-align:center;padding:50px 0;border-radius:5px}
-.flex-box{display:flex;gap:10px;flex-wrap:wrap}
-.flex-box > div{flex:1;min-width:300px}
-.jour-box{border-left:3px solid red;padding-left:10px;margin:10px 0}
-.jour-title{color:red;font-size:12px;font-weight:bold}
-.contact input,.contact textarea{width:100%;padding:8px;margin:5px 0;border:1px solid #ccc;border-radius:3px}
-.btn-send{background:#d4af37;border:none;padding:8px 20px;border-radius:3px;color:#000;font-weight:bold}
+  body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; color:#333; }
+  header { background:#B30000; color:#fff; padding:12px 20px; text-align:center; position:sticky; top:0; z-index:999; }
+  header h1 { margin:5px 0; font-size:24px; }
+  header p { margin:0; font-size:14px; }
+  nav { background:#000; padding:10px; text-align:center; position:sticky; top:55px; z-index:999; }
+  nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
+  nav a:hover { color:#FFD700; }
+  
+  .container { max-width:1200px; margin:auto; padding:15px; }
+
+  .breaking-card {
+    background: #fff; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    padding: 18px; margin: 25px 0; text-align: center; border-top: 4px solid #B30000;
+  }
+  .breaking-card h2 { color: #B30000; font-size: 22px; margin-bottom: 12px; font-weight: 700; }
+  .breaking-card img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
+  .breaking-card h3 { color: #B30000; font-size: 20px; margin: 8px 0; }
+  
+  .category-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px; margin: 25px 0;
+  }
+  .cat-card {
+    background: #fff; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    overflow: hidden; transition: 0.3s ease; text-decoration: none; color: inherit;
+  }
+  .cat-card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .cat-card img { width: 100%; height: 170px; object-fit: cover; }
+  .cat-card .content { padding: 12px 14px; }
+  .cat-card h4 { font-size: 17px; margin: 0; color: #000; font-weight: 700; }
+  .cat-card p { font-size: 13px; color: #666; margin: 6px 0 0; }
+
+  .section-title { text-align:center; margin:30px 0 10px; color:#B30000; font-size:24px; border-bottom:2px solid #B30000; padding-bottom:5px; }
+
+  .news-card-3lang {
+    background: #fff; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    margin: 20px 0; padding: 15px; scroll-margin-top: 120px; /* sticky header ke liye */
+  }
+  .news-card-3lang img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
+  .news-card-3lang h3 { color: #B30000; font-size: 18px; margin-bottom: 8px; }
+  .lang-box { margin: 8px 0; padding: 10px; background: #f9f9f9; border-left: 4px solid #B30000; border-radius: 5px; }
+  .lang-box b { color: #000; }
+
+  footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:30px; }
+  @media(max-width:768px){ .breaking-card img{height:200px;} }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="social">
-    <a href="https://www.instagram.com/aayush_vaishnav_1" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com/@newsman-view" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://wa.me/919303100358" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="tel:+919303100358"><i class="fas fa-phone"></i> +91-9303100358</a>
-  </div>
-  <div><i class="fas fa-envelope"></i> aklove012016@gmail.com</div>
-</div>
-
-<!-- BREAKING -->
-<div class="breaking">
-  <div class="breaking-label">BREAKING</div>
-  <div class="ticker">
-    <span>भिलाई में तेज बारिश की चेतावनी | Heavy Rain Alert in Bhilai | भिलाईनगरे तीव्रा वृष्टि चेतावनी ||</span>
-  </div>
-</div>
-
-<!-- TOP ROW -->
-<div class="top-row">
-  <button class="btn-epaper">Read E-Paper</button>
-  <span>10:32 am | 10 Jul 2026 | Bhilai</span>
-</div>
-
-<!-- HEADER -->
-<div class="header">
+<header>
   <h1>THE PASHUPATINATH NEWS</h1>
-  <p style="font-size:12px;margin:5px 0">INDIA EDITION</p>
+  <p><span id="live-time"></span></p> <!-- LIVE TIME -->
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#india">India</a>
+  <a href="#tech">Tech</a>
+  <a href="#cricket">Cricket</a>
+  <a href="#political">Political</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- 1. BREAKING HEADLINE BOX -->
+<div class="breaking-card" id="home">
+  <h2>🔥 Breaking Headline</h2>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Breaking News">
+  <h3>Pashupatinath News Launches New Digital Platform</h3>
+  <p>Read the latest news from India and around the world in Hindi, English and Sanskrit.</p>
 </div>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <input type="text" class="search-box" placeholder="Search...">
-  <a href="#" class="active">TPN</a>
-  <a href="#">INDIA</a>
-  <a href="#">TECH</a>
-  <a href="#">CRICKET</a>
-  <a href="#">POLITICAL</a>
+<!-- 2. CATEGORY GRID WITH IMAGE -->
+<h2 class="section-title">Categories</h2>
+<div class="category-grid">
+  
+  <a href="#india" class="cat-card">
+    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500" alt="India">
+    <div class="content"><h4>INDIA</h4><p>देश भर की ताजा खबरें</p></div>
+  </a>
+
+  <a href="#tech" class="cat-card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Tech">
+    <div class="content"><h4>TECH</h4><p>Technology and Gadget news</p></div>
+  </a>
+
+  <a href="#cricket" class="cat-card">
+    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500" alt="Cricket">
+    <div class="content"><h4>CRICKET</h4><p>Cricket match updates and scores</p></div>
+  </a>
+
+  <a href="#political" class="cat-card">
+    <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=500" alt="Political">
+    <div class="content"><h4>POLITICAL</h4><p>राजनीति की बड़ी खबरें</p></div>
+  </a>
+
 </div>
 
-<h2 class="section-title">LATEST NEWS</h2>
-
-<!-- NEWS 1 -->
-<a href="news1.html" class="news-card">
-  <div class="news-img"></div>
-  <div class="news-content">
-    <div class="lang-label">हिंदी समाचार</div>
-    <div class="hi">भिलाई में आज सुबह से तेज बारिश, 24 घंटे की चेतावनी जारी</div>
-    <div class="lang-label">ENGLISH</div>
-    <div class="en">Heavy rain in Bhilai since morning, warning for next 24 hours</div>
-    <div class="lang-label">संस्कृत</div>
-    <div class="sk">भिलाईनगरे अद्य प्रभात् तीव्रा वृष्टिः, चतुर्विंशतिघण्टा चेतावनी</div>
-  </div>
-</a>
-
-<!-- NEWS 2 -->
-<a href="news2.html" class="news-card">
-  <div class="news-img"></div>
-  <div class="news-content">
-    <div class="lang-label">हिंदी</div>
-    <div class="hi">भिलाई स्टील प्लांट में 500 पदों पर भर्ती शुरू</div>
-    <div class="lang-label">ENGLISH</div>
-    <div class="en">Bhilai Steel Plant recruitment open for 500 posts</div>
-    <div class="lang-label">संस्कृत</div>
-    <div class="sk">भिलाई लौह संयंत्रे पञ्चशत पदेषु नियुक्तिः आरब्धा</div>
-  </div>
-</a>
-
-<!-- NEWS 3 -->
-<a href="news3.html" class="news-card">
-  <div class="news-img"></div>
-  <div class="news-content">
-    <div class="lang-label">हिंदी</div>
-    <div class="hi">छत्तीसगढ़ में 15 अक्टूबर से शीतकालीन छुट्टियां</div>
-    <div class="lang-label">ENGLISH</div>
-    <div class="en">Winter holidays in Chhattisgarh schools from 15 Oct</div>
-    <div class="lang-label">संस्कृत</div>
-    <div class="sk">छत्तीसगढ़ राज्यस्य विद्यालयेषु शीतकालीन अवकाशः</div>
-  </div>
-</a>
-
-<!-- WEATHER -->
-<div class="weather">
-  <b>Live Weather - Bhilai</b><br>
-  Loading...
+<!-- 3. INDIA NEWS SECTION -->
+<h2 class="section-title" id="india">INDIA NEWS</h2>
+<div class="news-card-3lang">
+  <img src="https://images.unsplash.com/photo-1588681664895-905115478192?w=800" alt="India News">
+  <h3>New Education Policy Announced</h3>
+  <div class="lang-box"><b>Hindi:</b> नई शिक्षा नीति की घोषणा की गई, जिससे छात्रों को बड़े फायदे होंगे।</div>
+  <div class="lang-box"><b>English:</b> New Education Policy announced, which will bring big benefits to students.</div>
+  <div class="lang-box"><b>Sanskrit:</b> नूतन शिक्षा नीतिः घोषिता, यया छात्राणां महत् लाभः भविष्यति।</div>
 </div>
 
-<!-- VIDEO + MOST READ -->
-<div class="flex-box">
-  <div class="video-box">
-    <b>Latest Video - NEWSMAN'S VIEW</b>
-    <div class="video-placeholder">
-      <div style="font-size:30px">!</div>
-      This video is unavailable
-    </div>
-  </div>
-  <div class="most-read">
-    <b>Most Read</b><br><br>
-    1. Top News 1<br>
-    2. Top News 2<br>
-    3. Top News 3<br>
-    4. Top News 4<br>
-    5. Top News 5
-  </div>
+<!-- 4. TECH NEWS SECTION -->
+<h2 class="section-title" id="tech">TECH NEWS</h2>
+<div class="news-card-3lang">
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Tech News">
+  <h3>New 5G Phone Launched in India</h3>
+  <div class="lang-box"><b>Hindi:</b> भारत में नया 5G फोन लॉन्च हुआ, कीमत 15 हजार से शुरू।</div>
+  <div class="lang-box"><b>English:</b> New 5G phone launched in India, price starts from 15 thousand.</div>
+  <div class="lang-box"><b>Sanskrit:</b> भारते नूतनः 5G दूरभाषः लब्धः, मूल्यं पञ्चदश सहस्रात् आरभ्यते।</div>
 </div>
 
-<!-- JOURNALISTS -->
-<h2 class="section-title">OUR JOURNALISTS</h2>
-<div class="journalists flex-box">
-  <div class="jour-box">
-    <div class="jour-title">CHIEF IN EDITOR - OWNER</div>
-    <div><b>AAYUSH VAISHNAV</b></div>
-  </div>
-  <div class="jour-box">
-    <div class="jour-title">CO NEWS EDITOR</div>
-    <div><b>PRASHANT VERMA</b></div>
-  </div>
+<!-- 5. CRICKET NEWS SECTION -->
+<h2 class="section-title" id="cricket">CRICKET NEWS</h2>
+<div class="news-card-3lang">
+  <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800" alt="Cricket News">
+  <h3>India Wins T20 Match Against Australia</h3>
+  <div class="lang-box"><b>Hindi:</b> भारत ने ऑस्ट्रेलिया के खिलाफ T20 मैच 5 विकेट से जीता।</div>
+  <div class="lang-box"><b>English:</b> India won the T20 match against Australia by 5 wickets.</div>
+  <div class="lang-box"><b>Sanskrit:</b> भारतः ऑस्ट्रेलिया विरुद्ध T20 स्पर्धां पञ्च विकेटैः विजितवान्।</div>
+</div>
+
+<!-- 6. POLITICAL NEWS SECTION -->
+<h2 class="section-title" id="political">POLITICAL NEWS</h2>
+<div class="news-card-3lang">
+  <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800" alt="Political News">
+  <h3>Parliament Winter Session Begins</h3>
+  <div class="lang-box"><b>Hindi:</b> संसद का शीतकालीन सत्र आज से शुरू, कई बड़े बिल पेश होंगे।</div>
+  <div class="lang-box"><b>English:</b> Parliament's winter session begins today, many big bills to be introduced.</div>
+  <div class="lang-box"><b>Sanskrit:</b> संसदः हेमन्त अधिवेशनम् अद्य आरभते, बहवः महत्त्वपूर्णाः विधेयकाः प्रस्तुताः भविष्यन्ति।</div>
 </div>
 
 <!-- CONTACT -->
-<div class="contact">
-  <b>Contact Us</b><br><br>
-  <input type="text" placeholder="Your Name">
-  <input type="email" placeholder="Your Email">
-  <textarea placeholder="Your Message" rows="4"></textarea>
-  <button class="btn-send">Send Message</button>
+<div id="contact" style="background:#fff; padding:20px; border-radius:10px; margin-top:30px;">
+  <h2 style="color:#B30000;">Contact Us</h2>
+  <p>Email: contact@pashupatinathnews.com</p>
 </div>
+
+</div>
+
+<footer>
+  <p>© 2025 THE PASHUPATINATH NEWS - INDIA EDITION. All Rights Reserved.</p>
+</footer>
+
+<script>
+// LIVE TIME SCRIPT
+function updateTime(){
+  const now = new Date();
+  const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+  document.getElementById("live-time").innerText = now.toLocaleString('en-IN', options) + " | Bhilai";
+}
+setInterval(updateTime, 1000);
+updateTime();
+</script>
 
 </body>
 </html>
