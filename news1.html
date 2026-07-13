@@ -20,7 +20,7 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
 .news-img{width:100%; max-height:450px; object-fit:cover; border-radius:6px; margin:15px 0;}
 .lang-block{margin:25px 0; padding:15px; border-left:4px solid #B00000; background:#fafafa;}
 .lang-title{color:#B00000; font-size:20px; font-weight:bold; margin-bottom:10px;}
-.lang-block p{font-size:15px; line-height:1.8; text-align:justify;}
+.lang-block p{font-size:15px; line-height:1.8; text-align:justify; white-space:pre-line;}
 .note-box{background:#FFF3CD; border:1px solid #FFD700; padding:15px; border-radius:6px; margin:20px 0; font-size:14px;}
 .contact-bar{background:#000; padding:15px; text-align:center; margin-top:20px; border-radius:6px;}
 .contact-bar a{display:inline-block; margin:5px 8px; padding:10px 18px; border-radius:25px; text-decoration:none; color:#fff; font-weight:bold; font-size:13px;}
@@ -38,12 +38,10 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
 <div class="container">
   <a href="index.html" class="btn-back">← Wapas Home Pe Jao</a>
   
-  <!-- CLOUDCANNON TAGS -->
   <span class="cat-tag">{{category}}</span>
   <h1 style="color:#B00000; text-align:center; font-size:22px;">{{title}}</h1>
   <div class="date">📅 {{date}}</div>
   
-  <!-- NEWS IMAGE -->
   <img src="{{image}}" class="news-img" alt="{{title}}">
 
   <!-- 1. HINDI -->
@@ -64,12 +62,10 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
     <p>{{sanskrit}}</p>
   </div>
 
-  <!-- NOTE -->
   <div class="note-box">
     <b>Note:</b> अगर आस पास कोई समस्या या खबर या विज्ञापन चलवाना हो तो नीचे दिए गए Direct Contact बटन से हमसे संपर्क करें। फोटो, वीडियो एवं समस्या लिखकर भेज सकते हैं। पूरी निजता के साथ आपकी दी हुई जानकारी सिर्फ समाचार वेबसाइट की टीम तक पहुंचेगी।
   </div>
 
-  <!-- CONTACT BUTTONS -->
   <div class="contact-bar">
     <a href="https://wa.me/919303100358?text=Namaste%20Sir,%20Mere%20paas%20ek%20khabar/problem%20hai:" target="_blank" class="btn-wa">💬 WHATSAPP</a>
     <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="btn-ig">📷 INSTAGRAM</a>
