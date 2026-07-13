@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} - THE PASHUPATINATH NEWS</title>
+
+<!-- OG TAGS -->
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{excerpt}}" />
+<meta property="og:image" content="{{image}}" />
+<meta property="og:type" content="article" />
+
+<style>
+body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
+.header{background:#000; color:#FFD700; text-align:center; padding:15px; font-size:18px; font-weight:bold; letter-spacing:1px;}
+.container{max-width:900px; margin:15px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.cat-tag{display:inline-block; background:#B00000; color:#fff; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:bold; margin-bottom:10px;}
+.date{color:#666; font-size:13px; margin-bottom:15px;}
+.news-img{width:100%; max-height:450px; object-fit:cover; border-radius:6px; margin:15px 0;}
+.lang-block{margin:25px 0; padding:15px; border-left:4px solid #B00000; background:#fafafa;}
+.lang-title{color:#B00000; font-size:20px; font-weight:bold; margin-bottom:10px;}
+.lang-block p{font-size:15px; line-height:1.8; text-align:justify; white-space:pre-line;}
+.note-box{background:#FFF3CD; border:1px solid #FFD700; padding:15px; border-radius:6px; margin:20px 0; font-size:14px;}
+.contact-bar{background:#000; padding:15px; text-align:center; margin-top:20px; border-radius:6px;}
+.contact-bar a{display:inline-block; margin:5px 8px; padding:10px 18px; border-radius:25px; text-decoration:none; color:#fff; font-weight:bold; font-size:13px;}
+.btn-wa{background:#25D366;}
+.btn-ig{background:linear-gradient(45deg,#f09433,#dc2743);}
+.btn-mail{background:#D44638;}
+.btn-back{display:block; text-align:center; margin:15px 0; color:#B00000; text-decoration:none; font-weight:bold;}
+.footer{text-align:center; padding:15px; font-size:12px; color:#666;}
+</style>
+</head>
+<body>
+
+<div class="header">THE PASHUPATINATH NEWS - TRIBHASHA NEWS</div>
+
+<div class="container">
+  <a href="index.html" class="btn-back">← Wapas Home Pe Jao</a>
+  
+  <span class="cat-tag">{{category}}</span>
+  <h1 style="color:#B00000; text-align:center; font-size:22px;">{{title}}</h1>
+  <div class="date">📅 {{date}}</div>
+  
+  <img src="{{image}}" class="news-img" alt="{{title}}">
+
+  <!-- 1. HINDI -->
+  <div class="lang-block">
+    <div class="lang-title">1. HINDI</div>
+    <p>{{hindi}}</p>
+  </div>
+
+  <!-- 2. ENGLISH -->
+  <div class="lang-block">
+    <div class="lang-title">2. ENGLISH</div>
+    <p>{{english}}</p>
+  </div>
+
+  <!-- 3. SANSKRIT -->
+  <div class="lang-block">
+    <div class="lang-title">3. SANSKRIT</div>
+    <p>{{sanskrit}}</p>
+  </div>
+
+  <div class="note-box">
+    <b>Note:</b> अगर आस पास कोई समस्या या खबर या विज्ञापन चलवाना हो तो नीचे दिए गए Direct Contact बटन से हमसे संपर्क करें। फोटो, वीडियो एवं समस्या लिखकर भेज सकते हैं। पूरी निजता के साथ आपकी दी हुई जानकारी सिर्फ समाचार वेबसाइट की टीम तक पहुंचेगी।
+  </div>
+
+  <div class="contact-bar">
+    <a href="https://wa.me/919303100358?text=Namaste%20Sir,%20Mere%20paas%20ek%20khabar/problem%20hai:" target="_blank" class="btn-wa">💬 WHATSAPP</a>
+    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" target="_blank" class="btn-ig">📷 INSTAGRAM</a>
+    <a href="mailto:aklove012016@gmail.com?subject=News/Ad for Pashupatinath News" class="btn-mail">📧 GMAIL</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 THE PASHUPATINATH NEWS - INDIA EDITION. All Rights Reserved.
+</div>
+
+</body>
+</html>
