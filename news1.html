@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PASHUPATINATH NEWS - Tribhasha News</title>
+<title>{{title}} - THE PASHUPATINATH NEWS</title>
 
 <!-- OG TAGS -->
-<meta property="og:title" content="THE PASHUPATINATH NEWS - Pehli Khabar" />
-<meta property="og:description" content="Nishpaksh, Sachchi Khabron ke liye Samarpit" />
-<meta property="og:image" content="https://pashupatinath-news.github.io/thepashupatinathnews/news1.jpg1" />
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{excerpt}}" />
+<meta property="og:image" content="{{image}}" />
 <meta property="og:type" content="article" />
 
 <style>
 body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
 .header{background:#000; color:#FFD700; text-align:center; padding:15px; font-size:18px; font-weight:bold; letter-spacing:1px;}
 .container{max-width:900px; margin:15px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.cat-tag{display:inline-block; background:#B00000; color:#fff; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:bold; margin-bottom:10px;}
+.date{color:#666; font-size:13px; margin-bottom:15px;}
 .news-img{width:100%; max-height:450px; object-fit:cover; border-radius:6px; margin:15px 0;}
 .lang-block{margin:25px 0; padding:15px; border-left:4px solid #B00000; background:#fafafa;}
 .lang-title{color:#B00000; font-size:20px; font-weight:bold; margin-bottom:10px;}
@@ -36,48 +38,30 @@ body{margin:0; font-family:Arial, sans-serif; background:#f1f1f1; color:#222;}
 <div class="container">
   <a href="index.html" class="btn-back">← Wapas Home Pe Jao</a>
   
-  <h1 style="color:#B00000; text-align:center; font-size:22px;">Hamari Pehli Khabar</h1>
+  <!-- CLOUDCANNON TAGS -->
+  <span class="cat-tag">{{category}}</span>
+  <h1 style="color:#B00000; text-align:center; font-size:22px;">{{title}}</h1>
+  <div class="date">📅 {{date}}</div>
   
   <!-- NEWS IMAGE -->
-  <img src="news1.jpg1" class="news-img" alt="Pashupatinath News Launch">
+  <img src="{{image}}" class="news-img" alt="{{title}}">
 
   <!-- 1. HINDI -->
   <div class="lang-block">
     <div class="lang-title">1. HINDI</div>
-    <p>
-      नमस्कार <br><br>
-      "THE PASHUPATINATH NEWS - TRIBHASHA NEWS" में आप सभी का स्वागत है। <br><br>
-      यह हमारी समाचार वेबसाइट की पहली खबर है जिसके माध्यम से आप सभी को बताना चाहेंगे कि हमारा यह समाचार वेबसाइट सदैव निष्पक्ष भाव से सच्ची खबरों का वितरण बिना पक्षपात के करेगा। <br><br>
-      एवं अन्याय के विरुद्ध लड़ाई लड़ने के लिए हमेशा तत्पर रहेगा। <br><br>
-      हमारे इस समाचार वेबसाइट का मुख्य सिद्धांत है - 
-      <b>राष्ट्र सेवा + सच के प्रति समर्पित + पशु सेवा + जन सेवा</b>।
-    </p>
+    <p>{{hindi}}</p>
   </div>
 
   <!-- 2. ENGLISH -->
   <div class="lang-block">
     <div class="lang-title">2. ENGLISH</div>
-    <p>
-      Greetings <br><br>
-      Welcome to all of you in "THE PASHUPATINATH NEWS - TRIBHASHA NEWS". <br><br>
-      This is the first news of our news website through which we would like to inform you that our news website will always distribute true news with an impartial attitude and without bias. <br><br>
-      And will always be ready to fight against injustice. <br><br>
-      The main principle of our news website is - 
-      <b>Nation Service + Committed to Truth + Animal Service + Public Service</b>.
-    </p>
+    <p>{{english}}</p>
   </div>
 
   <!-- 3. SANSKRIT -->
   <div class="lang-block">
     <div class="lang-title">3. SANSKRIT</div>
-    <p>
-      नमस्कारः <br><br>
-      "THE PASHUPATINATH NEWS - TRIBHASHA NEWS" अस्मिन् यूयं सर्वे स्वागतं कुर्मः। <br><br>
-      इयं अस्माकं समाचारजालपृष्ठस्य प्रथमा वार्ता अस्ति। एतया वयं सर्वेभ्यः कथयितुम् इच्छामः यत् अस्माकं इदं समाचारजालपृष्ठं सदा निष्पक्षभावेन सत्यवार्तानां वितरणं पक्षपातं विना करिष्यति। <br><br>
-      तथैव अन्यायस्य विरुद्धं युद्धं कर्तुं सदा तत्परं भविष्यति। <br><br>
-      अस्माकं अस्य समाचारजालपृष्ठस्य मुख्यः सिद्धान्तः अस्ति - 
-      <b>राष्ट्रसेवा + सत्यस्य प्रति समर्पणम् + पशुसेवा + जनसेवा</b>।
-    </p>
+    <p>{{sanskrit}}</p>
   </div>
 
   <!-- NOTE -->
