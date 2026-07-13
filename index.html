@@ -5,57 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE PASHUPATINATH NEWS - TRIBHASHA NEWS</title>
 
-<!-- YE 4 LINE NAYI JOD DE -->
 <meta property="og:title" content="THE PASHUPATINATH NEWS - TRIBHASHA NEWS">
 <meta property="og:description" content="Hindi, English, Sanskrit me Breaking News">
-<meta property="og:image" content="https://pashupatinath-news.github.io/thepashupatinathnews/news1.jpg.1">
+<meta property="og:image" content="https://pashupatinath-news.github.io/thepashupatinathnews/news1.jpg">
 <meta property="og:url" content="https://pashupatinath-news.github.io/thepashupatinathnews/">
 
 <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
-    header { background:#FFD700; padding:10px; text-align:center; color:#8B0000; font-weight:bold; font-size:22px; }
-    nav { background:#000; padding:10px; text-align:center; }
-    nav a { color:#fff; margin:0 8px; text-decoration:none; font-size:14px; }
-    .epaper { background:#000; color:#FFD700; text-align:center; padding:8px; font-weight:bold; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body { font-family: 'Poppins', Arial, sans-serif; margin:0; padding:0; background:#f4f7f9; color:#333; }
     
-    /* SLIDING BREAKING TICKER */
-    .breaking { background:red; color:#fff; padding:8px 0; font-weight:bold; overflow:hidden; white-space:nowrap; }
-    .breaking a { color:#fff; text-decoration:none; }
-    .breaking a:hover { text-decoration:underline; }
-    .ticker { display:inline-block; padding-left:100%; animation: slide 25s linear infinite; }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+    header { background:linear-gradient(90deg, #8B0000, #FFD700); padding:15px; text-align:center; color:#fff; font-weight:700; font-size:26px; letter-spacing:1px; }
+    
+    nav { background:#1a1a1a; padding:12px; text-align:center; position:sticky; top:0; z-index:999; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-size:14px; font-weight:600; padding:5px 8px; border-radius:4px; transition:0.3s; }
+    nav a:hover { background:#FFD700; color:#000; }
 
-    .container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:8px; }
-    .main-news img { width:100%; border-radius:8px; }
-    .news-title { text-align:center; color:#8B0000; margin-top:10px; font-size:20px; font-weight:bold; }
-    .news-content { margin-top:15px; line-height:1.8; }
-    .lang { margin-bottom:20px; padding:15px; border-left:4px solid #FFD700; background:#fffdf0; border-radius:4px; }
-    .lang b { color:#8B0000; font-size:16px; }
-    .read-more { text-align:center; margin-top:15px; }
-    .read-more a { background:#8B0000; color:#fff; padding:8px 15px; border-radius:5px; text-decoration:none; font-weight:bold; }
-    .contact-box { background:#fff; max-width:900px; margin:20px auto; padding:20px; border:2px dashed red; border-radius:8px; text-align:center; }
-    .contact-btns a { display:inline-block; margin:5px; padding:10px 18px; border-radius:5px; color:#fff; text-decoration:none; font-weight:bold; font-size:14px; }
+    .epaper { background:#000; color:#FFD700; text-align:center; padding:10px; font-weight:700; font-size:15px; }
+
+    .breaking { background:red; color:#fff; padding:10px 0; font-weight:700; overflow:hidden; white-space:nowrap; }
+    .ticker { display:inline-block; padding-left:100%; animation: slide 30s linear infinite; }
+    @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+    .container { max-width:1000px; margin:20px auto; padding:0 15px; }
+    
+    .news-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; }
+    .news-card { background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; transition:0.3s; }
+    .news-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+    .news-card img { width:100%; height:200px; object-fit:cover; }
+    .card-content { padding:15px; }
+    .category-tag { background:#8B0000; color:#fff; padding:4px 10px; font-size:12px; border-radius:20px; display:inline-block; margin-bottom:8px; text-decoration:none; }
+    .news-title { font-size:18px; font-weight:700; color:#000; margin-bottom:10px; }
+    .news-title a { text-decoration:none; color:#000; }
+    .news-excerpt { font-size:14px; line-height:1.6; color:#555; }
+    .read-btn { display:inline-block; margin-top:10px; background:#FFD700; color:#000; padding:8px 15px; border-radius:5px; text-decoration:none; font-weight:700; }
+
+    .contact-box { background:#fff; max-width:1000px; margin:30px auto; padding:25px; border:2px dashed #8B0000; border-radius:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    .contact-btns a { display:inline-block; margin:8px; padding:12px 20px; border-radius:8px; color:#fff; text-decoration:none; font-weight:700; font-size:15px; transition:0.3s; }
+    .contact-btns a:hover { opacity:0.8; }
     .whatsapp { background:#25D366; } .email { background:#0072C6; } .insta { background:#E1306C; } .youtube { background:#FF0000; }
-    footer { background:#222; color:#fff; text-align:center; padding:20px; margin-top:30px; font-size:14px; }
-    .social-footer a { display:inline-block; margin:5px; padding:8px 12px; border-radius:5px; color:#fff; text-decoration:none; font-size:13px; font-weight:bold; }
-  </style>
+
+    footer { background:#1a1a1a; color:#ccc; text-align:center; padding:25px; margin-top:40px; font-size:14px; }
+    .social-footer a { display:inline-block; margin:5px; padding:10px 15px; border-radius:6px; color:#fff; text-decoration:none; font-size:13px; font-weight:600; }
+</style>
 </head>
 <body>
 
 <header>THE PASHUPATINATH NEWS</header>
 
 <nav>
-  <a href="#">HOME</a> <a href="#">INTERNATIONAL</a> <a href="#">INDIA</a> 
-  <a href="#">POLITICS</a> <a href="#">SPORTS</a> <a href="#">CHHATTISGARH</a>
-  <a href="#">DELHI</a> <a href="#">MUMBAI</a> <a href="#">NAGPUR</a> <a href="#">CRIME</a>
+  <a href="index.html">HOME</a> 
+  <a href="category.html?cat=INTERNATIONAL">INTERNATIONAL</a> 
+  <a href="category.html?cat=INDIA">INDIA</a> 
+  <a href="category.html?cat=POLITICS">POLITICS</a> 
+  <a href="category.html?cat=SPORTS">SPORTS</a> 
+  <a href="category.html?cat=CHHATTISGARH">CHHATTISGARH</a>
+  <a href="category.html?cat=CRIME">CRIME</a>
 </nav>
 
 <div class="epaper">THE PASHUPATINATH NEWS TRIBHASHA DAILY E-PAPER</div>
 
-<!-- SLIDING BREAKING TICKER - 3 BHASHA -->
 <div class="breaking">
   <div class="ticker">
     <a href="news1.html">
@@ -67,36 +75,19 @@
 </div>
 
 <div class="container">
-  <div class="main-news">
-    <img src="news1.jpg1" alt="पहली खबर">
-    <div class="news-title">पहली खबर - FIRST NEWS - प्रथमा वार्ता</div>
+  <div class="news-grid">
     
-    <div class="news-content">
-      <div class="lang">
-        <b>Hindi:</b><br>
-        नमस्कार "THE PASHUPATINATH NEWS - TRIBHASHA NEWS" में आप सभी का स्वागत है। <br>
-        आज हम अपनी वेबसाइट को लॉन्च कर रहे हैं। इस वेबसाइट पर आपको खबरें हिंदी, अंग्रेजी और संस्कृत तीनों भाषाओं में मिलेंगी। <br>
-        हमारा उद्देश्य है सच्ची और निष्पक्ष खबर आप तक सबसे पहले पहुंचाना।
-      </div>
-
-      <div class="lang">
-        <b>English:</b><br>
-        Greetings. Welcome to "THE PASHUPATINATH NEWS - TRIBHASHA NEWS". <br>
-        Today we are launching our website. On this website you will get news in three languages - Hindi, English and Sanskrit. <br>
-        Our aim is to bring you true and impartial news first.
-      </div>
-
-      <div class="lang">
-        <b>Sanskrit:</b><br>
-        नमस्कारः "THE PASHUPATINATH NEWS - TRIBHASHA NEWS" अस्मिन् सर्वेषां स्वागतम्। <br>
-        अद्य वयं स्वीयं जालस्थलं उद्घाटयामः। अस्मिन् जालस्थले भवद्भ्यः समाचाराः त्रिषु भाषासु - हिन्दी, आंग्ल, संस्कृत भाषासु प्राप्स्यन्ते। <br>
-        अस्माकं उद्देश्यं सत्यां निष्पक्षां च वार्तां भवद्भ्यः प्रथमं प्रापयितुम्।
+    <!-- YE EK CARD HAI. AAGE CMS SE AUTO BANENGE -->
+    <div class="news-card">
+      <img src="news1.jpg" alt="पहली खबर">
+      <div class="card-content">
+        <a href="category.html?cat=INDIA" class="category-tag">INDIA</a>
+        <div class="news-title"><a href="news1.html">पहली खबर - FIRST NEWS - प्रथमा वार्ता</a></div>
+        <div class="news-excerpt">नमस्कार "THE PASHUPATINATH NEWS" में आप सभी का स्वागत है। आज हम अपनी वेबसाइट को लॉन्च कर रहे हैं...</div>
+        <a href="news1.html" class="read-btn">पूरा पढ़ें</a>
       </div>
     </div>
 
-    <div class="read-more">
-      <a href="news1.html">पूरा पढ़ें / Read Full News</a>
-    </div>
   </div>
 </div>
 
@@ -106,7 +97,8 @@
   <div class="contact-btns">
     <a href="https://wa.me/919303100358" class="whatsapp">📱 WhatsApp</a>
     <a href="mailto:aklove012016@gmail.com" class="email">📧 Email</a>
-    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" class="insta">📷 Instagram DM</a>
+    <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" class="insta">📷 Instagram</a>
+    <a href="https://youtube.com/@newsman-view?si=_xOkvRZUi5VKEhFP" class="youtube">▶️ YouTube</a>
   </div>
 </div>
 
@@ -114,14 +106,12 @@
   <b>THE PASHUPATINATH NEWS</b><br><br>
   <b>Address:</b> VILLAGE - KASHI, POST - GUJRA, BLOCK - PATAN, DISTRICT - DURG, CHHATTISGARH, INDIA<br><br>
   <b>Contact:</b> +91 9303100358 | aklove012016@gmail.com<br><br>
-  
   <div class="social-footer">
     <a href="https://wa.me/919303100358" class="whatsapp">WhatsApp</a>
     <a href="https://www.instagram.com/aayush_vaishnav_1?igsh=Mm8yZXpuZ2l0c2pl" class="insta">Instagram</a>
     <a href="https://youtube.com/@newsman-view?si=_xOkvRZUi5VKEhFP" class="youtube">YouTube</a>
   </div>
-  <br>
-  © 2026 THE PASHUPATINATH NEWS. All Rights Reserved.
+  <br>© 2026 THE PASHUPATINATH NEWS. All Rights Reserved.
 </footer>
 
 </body>
